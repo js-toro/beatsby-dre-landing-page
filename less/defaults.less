@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 #colors() {
+	primary: hsla(351, 100%, 55%, 1);
+	primary-variant: rgb(179, 22, 45);
 	bg: hsla(240, 3%, 6%, 1);
 	bg-variant: hsla(240, 5%, 12%, 1);
 	white: hsla(240, 4%, 95%, 1);
@@ -21,6 +23,10 @@
 
 #containers() {
 	sm: 90%;
+	md: 85%;
+	lg: 80%;
+	xl: min(90%, 992px);
+	xxl: min(90%, 1200px);
 }
 
 @mq-sm: ~'(min-width: 380px)';
@@ -36,6 +42,20 @@ body {
 	color: #colors[light];
 	line-height: #line-heights[texts];
 }
+
+::-webkit-scrollbar {
+	width: 1rem;
+
+	&-track {
+		background: linear-gradient(180deg, #403B3E 0%, #242526 100%);
+	}
+
+	&-thumb {
+		border-radius: 0.5rem;
+		background: #colors[bg-variant];
+	}
+}
+
 h1,
 h2,
 h3 {
@@ -45,6 +65,22 @@ h3 {
 .container {
 	margin: 0 auto;
 	width: #containers[sm];
+
+	@media @mq-md {
+		width: #containers[md];
+	}
+
+	@media @mq-lg {
+		width: #containers[lg];
+	}
+
+	@media @mq-xl {
+		width: #containers[xl];
+	}
+
+	@media @mq-xxl {
+		width: #containers[xxl];
+	}
 }
 .btn {
 	background: #colors[bg-variant];
