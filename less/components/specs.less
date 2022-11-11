@@ -1,0 +1,47 @@
+.specs {
+  margin-bottom: 5rem;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 0 auto;
+    max-width: 50rem;
+  }
+
+  &__image {
+    position: relative;
+    top: -25px;
+    right: -5rem;
+  }
+}
+
+.spec {
+  margin-bottom: 2rem;
+  position: relative;
+  
+  &:first-child,
+  &:last-child {
+    left: 2.4rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
