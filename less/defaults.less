@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+#colors() {
+	bg: hsla(240, 3%, 6%, 1);
+	bg-variant: hsla(240, 5%, 12%, 1);
+	white: hsla(240, 4%, 95%, 1);
+	light: hsla(204, 4%, 75%, 1);
+}
+
+#line-heights() {
+	headings: 60px;
+	texts: 32px;
+	buttons: 22px;
+}
+
+#transitions() {
+	300ms: all 300ms ease;
+	400ms: all 400ms ease;
+	1000ms: all 1000ms ease;
+}
+
+#containers() {
+	sm: 90%;
+}
+
+@mq-sm: ~'(min-width: 380px)';
+@mq-md: ~'(min-width: 576px)';
+@mq-lg: ~'(min-width: 768px)';
+@mq-xl: ~'(min-width: 992px)';
+@mq-xxl: ~'(min-width: 1200px)';
+@mq-xxxl: ~'(min-width: 1400px)';
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #colors[bg];
+	color: #colors[light];
+	line-height: #line-heights[texts];
+}
+h1,
+h2,
+h3 {
+	color: #colors[white];
+	line-height: #line-heights[headings];
+}
+.container {
+	margin: 0 auto;
+	width: #containers[sm];
+}
+.btn {
+	background: #colors[bg-variant];
+	color: #colors[white];
+	padding: 2rem;
+	border-radius: 8px;
+	border: 2px solid transparent;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: #line-heights[buttons];
+	transition: #transitions[300ms];
+
+	&:hover {
+		background-color: #colors[bg];
+		border: 2px solid #colors[bg-variant];
+		cursor: pointer;
+	}
+}

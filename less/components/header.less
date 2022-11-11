@@ -1,0 +1,57 @@
+.home {
+  &__title {
+    margin-top: 15rem;
+    font-size: 4rem;
+    font-weight: 600;
+    position: relative;
+
+    &::before {
+      content: "On ear";
+      position: absolute;
+      top: -6rem;
+      left: 1.5rem;
+      background: linear-gradient(180deg, #403B3E 0%, #242526 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 6rem;
+      font-weight: 600;
+      text-fill-color: transparent;
+
+      @media @mq-sm {
+        font-size: 8rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  &__cta {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    &::before {
+      content: #images[shopping-bag];
+      position: relative;
+      top: 0.1rem;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+    }
+
+    span {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+	"name": "beatsby-dre-landing-page",
+	"version": "1.0.0",
+	"description": "Creation of a landing page responsive using BEM methodology.",
+	"main": "index.js",
+	"scripts": {
+		"dev": "live-server",
+		"less": "less-watch-compiler",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrToro/beatsby-dre-landing-page.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MrToro/beatsby-dre-landing-page/issues"
+	},
+	"homepage": "https://github.com/MrToro/beatsby-dre-landing-page#readme"
+}
