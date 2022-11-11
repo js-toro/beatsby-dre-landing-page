@@ -321,6 +321,11 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .header {
+    position: relative;
+  }
+}
 .header__home-link img {
   filter: opacity(1);
   transition: all 300ms ease;
