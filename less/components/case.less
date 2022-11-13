@@ -1,0 +1,46 @@
+.case {
+  margin-bottom: 6rem;
+
+  @media @mq-lg {
+    margin-bottom: 12rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    max-width: 50rem;
+
+    div:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    img {
+      position: relative;
+      left: -80px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__info {
+    p {
+      padding-right: 4rem;
+    }
+
+    .btn {
+      width: 150px;
+
+      // &::before {
+        
+      // }
+    }
+  }
+}

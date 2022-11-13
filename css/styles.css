@@ -161,6 +161,13 @@ h2 {
   border: 2px solid hsl(240, 5%, 12%);
   cursor: pointer;
 }
+.btn-variant {
+  background: hsl(240, 3%, 6%);
+}
+.btn-variant:hover {
+  background-color: hsl(240, 5%, 12%);
+  border: 2px solid hsl(240, 3%, 6%);
+}
 .home {
   display: grid;
 }
@@ -335,7 +342,7 @@ h2 {
 }
 @media (min-width: 768px) {
   .header {
-    position: relative;
+    position: absolute;
   }
 }
 .header__home-link img {
@@ -417,7 +424,14 @@ h2 {
   }
 }
 .specs {
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+@media (min-width: 768px) {
+  .specs {
+    margin-top: 6rem;
+    margin-bottom: 12rem;
+  }
 }
 .specs__grid {
   display: grid;
@@ -451,4 +465,96 @@ h2 {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.8rem;
+}
+.case {
+  margin-bottom: 6rem;
+}
+@media (min-width: 768px) {
+  .case {
+    margin-bottom: 12rem;
+  }
+}
+.case__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  max-width: 50rem;
+}
+.case__container div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+.case__container img {
+  position: relative;
+  left: -80px;
+}
+.case__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.case__info p {
+  padding-right: 4rem;
+}
+.case__info .btn {
+  width: 150px;
+}
+.discount {
+  background-color: hsl(240, 5%, 12%);
+  margin-bottom: 6rem;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .discount {
+    padding: 5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .discount {
+    margin-bottom: 12rem;
+  }
+}
+@media (min-width: 992px) {
+  .discount {
+    padding: 5rem 10rem;
+    max-width: 100rem;
+  }
+}
+.discount__info {
+  padding: 2rem;
+}
+.discount__info h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+.discount__info .btn {
+  margin-top: 1rem;
+}
+.discount__image {
+  position: absolute;
+  bottom: 0;
+  right: -150px;
+  transform: scale(0.5);
+}
+@media (min-width: 380px) {
+  .discount__image {
+    transform: scale(0.75);
+  }
+}
+@media (min-width: 576px) {
+  .discount__image {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    transform: scale(1);
+  }
 }

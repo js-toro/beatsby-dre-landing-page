@@ -1,0 +1,56 @@
+.discount {
+  background-color: #colors[bg-variant];
+  margin-bottom: 6rem;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+
+  @media @mq-md {
+    padding: 5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @media @mq-lg {
+    margin-bottom: 12rem;
+  }
+  
+  @media @mq-xl {
+    padding: 5rem 10rem;
+    max-width: 100rem;
+  }
+
+  &__info {
+    padding: 2rem;
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: -150px;
+    transform: scale(.5);
+
+    @media @mq-sm {
+      transform: scale(.75);
+    }
+
+    @media @mq-md {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      transform: scale(1);
+    }
+  }
+}
