@@ -637,13 +637,14 @@ a:hover {
 }
 .discount__image {
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   right: -150px;
-  transform: scale(0.5);
+  transform: scale(0.6);
 }
 @media (min-width: 380px) {
   .discount__image {
-    transform: scale(0.75);
+    bottom: -75px;
+    transform: scale(0.8);
   }
 }
 @media (min-width: 576px) {
