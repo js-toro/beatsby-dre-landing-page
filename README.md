@@ -11,3 +11,15 @@ Creation of a landing page responsive using BEM methodology and the technologies
 ## Live Demo
 
 https://mrtoro.github.io/beatsby-dre-landing-page/
+
+## Desktop's Preview:
+
+![Image](assets/desktop-preview.png)
+
+## Tablet's Preview:
+
+![Image](assets/tablet-preview.png)
+
+## Mobile's Preview:
+
+![Image](assets/mobile-preview.png)
