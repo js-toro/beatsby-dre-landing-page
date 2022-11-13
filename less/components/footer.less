@@ -11,14 +11,33 @@
     line-height: 2.2rem;
   }
 
+  &__home-image {
+    display: flex;
+    justify-content: center;
+  }
+
   &__grid {
+    display: grid;
+    gap: 3rem;
+
+    @media @mq-xl {
+      grid-template-columns: 2fr 5fr 5fr;
+    }
+  }
+
+  &__links-container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 
-    @media @mq-lg {
+    @media @mq-sm {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
+      gap: 0;
+    }
+
+    @media @mq-lg {
+      gap: 3rem;
     }
   }
 
@@ -27,6 +46,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media @mq-xl {
+      flex-grow: 1;
+    }
   }
 
   &__copy {
@@ -60,12 +83,28 @@
     font-size: 1.5rem;
     line-height: 2.2rem;
   }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &::before {
+      content: #images[send-icon];
+      height: 18px;
+    }
+  }
 }
 
 .socials {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   margin: 3.2rem 0;
+
+  @media @mq-lg {
+    justify-content: start;
+  }
 
   .btn {
     width: 32px;

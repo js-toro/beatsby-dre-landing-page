@@ -738,15 +738,34 @@ a:hover {
   font-size: 1.5rem;
   line-height: 2.2rem;
 }
+.footer__home-image {
+  display: flex;
+  justify-content: center;
+}
 .footer__grid {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 992px) {
+  .footer__grid {
+    grid-template-columns: 2fr 5fr 5fr;
+  }
+}
+.footer__links-container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-@media (min-width: 768px) {
-  .footer__grid {
+@media (min-width: 380px) {
+  .footer__links-container {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 0;
+  }
+}
+@media (min-width: 768px) {
+  .footer__links-container {
+    gap: 3rem;
   }
 }
 .footer__products,
@@ -754,6 +773,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media (min-width: 992px) {
+  .footer__products,
+  .footer__support {
+    flex-grow: 1;
+  }
 }
 .footer__copy {
   margin: 3.2rem;
@@ -785,10 +810,25 @@ a:hover {
   font-size: 1.5rem;
   line-height: 2.2rem;
 }
+.subscribe .btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.subscribe .btn::before {
+  content: url("../assets/send-icon.svg");
+  height: 18px;
+}
 .socials {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   margin: 3.2rem 0;
+}
+@media (min-width: 768px) {
+  .socials {
+    justify-content: start;
+  }
 }
 .socials .btn {
   width: 32px;
