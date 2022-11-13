@@ -1,4 +1,4 @@
-# Beatsby Dre Landing Page (WORK IN PROGRESS)
+# Beatsby Dre Landing Page
 
 Creation of a landing page responsive using BEM methodology and the technologies of:<br>
 
