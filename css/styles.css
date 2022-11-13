@@ -297,7 +297,7 @@ h2 {
   gap: 1.5rem;
 }
 .home__cta::before {
-  content: url("../assets/shopping-bag.svg");
+  content: url("../assets/shopping-bag-icon.svg");
   position: relative;
   top: 0.1rem;
   width: 3rem;
@@ -433,6 +433,13 @@ h2 {
     margin-bottom: 12rem;
   }
 }
+@media (min-width: 768px) {
+  .specs__title {
+    font-weight: 400;
+    font-size: 7.2rem;
+    line-height: 10.8rem;
+  }
+}
 .specs__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -474,32 +481,77 @@ h2 {
     margin-bottom: 12rem;
   }
 }
+@media (min-width: 768px) {
+  .case__title {
+    font-weight: 400;
+    font-size: 7.2rem;
+    line-height: 10.8rem;
+  }
+}
 .case__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
   max-width: 50rem;
-}
-.case__container div:last-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   gap: 4rem;
 }
+@media (min-width: 380px) {
+  .case__container {
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .case__container img {
-  position: relative;
-  left: -80px;
+  width: 50%;
+}
+@media (min-width: 380px) {
+  .case__container img {
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
 }
 .case__image {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.case__info p {
-  padding-right: 4rem;
+.case__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+@media (min-width: 380px) {
+  .case__info {
+    gap: 4rem;
+  }
+}
+@media (min-width: 380px) {
+  .case__info p {
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 576px) {
+  .case__info p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+  }
 }
 .case__info .btn {
-  width: 150px;
+  width: min(100%, 180px);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.case__info .btn::before {
+  content: url("../assets/alert-icon.svg");
+  position: relative;
+  top: 0.1rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
 }
 .discount {
   background-color: hsl(240, 5%, 12%);
@@ -528,14 +580,45 @@ h2 {
 }
 .discount__info {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .discount__info h3 {
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 2.7rem;
 }
+@media (min-width: 576px) {
+  .discount__info h3 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+}
+.discount__info p {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+@media (min-width: 576px) {
+  .discount__info p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
 .discount__info .btn {
-  margin-top: 1rem;
+  width: min(100%, 180px);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.discount__info .btn::before {
+  content: url("../assets/shopping-bag-icon.svg");
+  position: relative;
+  top: 0.1rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
 }
 .discount__image {
   position: absolute;

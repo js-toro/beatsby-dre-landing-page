@@ -5,22 +5,33 @@
     margin-bottom: 12rem;
   }
 
+  &__title {
+    @media @mq-lg {
+      font-weight: 400;
+      font-size: 7.2rem;
+      line-height: 10.8rem;
+    }
+  }
+
   &__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
     max-width: 50rem;
+    gap: 4rem;
 
-    div:last-child {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 4rem;
+    @media @mq-sm {
+      gap: 0;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     img {
-      position: relative;
-      left: -80px;
+      width: 50%;
+      
+      @media @mq-sm {
+        width: 100%;
+        position: relative;
+        left: -80px;
+      }
     }
   }
 
@@ -28,19 +39,45 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    @media @mq-sm {
+      gap: 4rem;
+    }
+
     p {
-      padding-right: 4rem;
+      @media @mq-sm {
+        padding-right: 4rem;
+      }
+
+      @media @mq-md {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+      }
     }
 
     .btn {
-      width: 150px;
+      width: min(100%, 180px);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
 
-      // &::before {
-        
-      // }
+      &::before {
+        content: #images[alert-icon];
+        position: relative;
+        top: 0.1rem;
+        width: 3rem;
+        height: 3rem;
+        object-fit: cover;
+      }
     }
   }
 }
