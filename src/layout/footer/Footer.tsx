@@ -1,4 +1,3 @@
-import { Link } from "../header/Header.styles";
 import {
 	CopyRight,
 	Grid,
