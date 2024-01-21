@@ -1,4 +1,14 @@
-import HeroImage from "./assets/hero.png";
+import {
+	Wrapper,
+	HeroImage,
+	HeroTitle,
+	HeroDescription,
+	HeroSubtitle,
+	CTA,
+	Stores,
+} from "./Hero.styles";
+
+import HeroPng from "./assets/hero.png";
 import AmazonLogo from "./assets/amazon-logo.png";
 import AppleLogo from "./assets/apple-logo.png";
 import Spotify from "./assets/spotify-logo.png";
@@ -6,30 +16,29 @@ import Youtube from "./assets/youtube-logo.png";
 
 export const Hero = () => {
 	return (
-		<section id="home-section" className="container home">
+		<Wrapper id="home-section" className="container">
 			<div>
-				<img
-					className="home__hero"
-					src={HeroImage}
+				<HeroImage
+					src={HeroPng}
 					alt="A beautiful headphones"
 					draggable="false"
 				/>
 			</div>
 
 			<div>
-				<h1 className="home__title">Beats 3</h1>
-				<h3 className="home__subtitle">Overview</h3>
-				<p className="home__description">
+				<HeroTitle>Beats 3</HeroTitle>
+				<HeroSubtitle>Overview</HeroSubtitle>
+				<HeroDescription>
 					Enjoy award-winning Beats sound with wireless listening freedom and a
 					sleek, streamlined design with comfortable padded earphones,
 					delivering first-rate playback.
-				</p>
-				<button className="btn home__cta">
+				</HeroDescription>
+				<CTA>
 					Add to Bag <span>N399K</span>
-				</button>
+				</CTA>
 			</div>
 
-			<div className="home__stores">
+			<Stores>
 				<a href="#">
 					<img draggable="false" src={AppleLogo} alt="Apple Logo" />
 				</a>
@@ -42,7 +51,7 @@ export const Hero = () => {
 				<a href="#">
 					<img draggable="false" src={Youtube} alt="Youtube Logo" />
 				</a>
-			</div>
-		</section>
+			</Stores>
+		</Wrapper>
 	);
 };

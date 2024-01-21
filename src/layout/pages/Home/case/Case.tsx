@@ -1,27 +1,35 @@
+import {
+	CaseButton,
+	CaseContainer,
+	CaseImageContainer,
+	CaseInfoContainer,
+	Title,
+	Wrapper,
+} from "./Case.styles";
 import CaseImage from "./assets/case-image.png";
 
 export const Case = () => {
 	return (
-		<section id="case-section" className="container case">
-			<h2 className="case__title">Case</h2>
+		<Wrapper id="case-section" className="container">
+			<Title>Case</Title>
 
-			<div className="case__container">
-				<div className="case__image">
+			<CaseContainer>
+				<CaseImageContainer>
 					<img
 						src={CaseImage}
 						alt="A beautiful case for your headphones"
 						draggable="false"
 					/>
-				</div>
+				</CaseImageContainer>
 
-				<div className="case__info">
+				<CaseInfoContainer>
 					<p>
 						With a comfortable and adaptable case so that you can store it
 						whenever you want, and keep your durability forever.
 					</p>
-					<button className="btn">More info</button>
-				</div>
-			</div>
-		</section>
+					<CaseButton>More info</CaseButton>
+				</CaseInfoContainer>
+			</CaseContainer>
+		</Wrapper>
 	);
 };
