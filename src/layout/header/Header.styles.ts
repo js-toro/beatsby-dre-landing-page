@@ -5,12 +5,13 @@ export const Wrapper = styled.header`
 	position: fixed;
 	left: 0;
 	right: 0;
-	margin: 4rem auto;
+	margin: 2.4rem auto;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	z-index: 10;
 
 	@media (min-width: ${Breakpoints.tablet.medium}) {
+		margin: 4rem auto;
 		position: absolute;
 	}
 `;

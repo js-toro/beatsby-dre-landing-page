@@ -89,7 +89,6 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	.container {
-		margin: 0 auto;
 		width: 90%;
 
 		@media (min-width: ${Breakpoints.tablet.small}) {
