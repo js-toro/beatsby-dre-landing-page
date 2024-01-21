@@ -1,22 +1,29 @@
 {
-	"name": "beatsby-dre-landing-page",
-	"version": "1.0.0",
-	"description": "Creation of a landing page responsive using BEM methodology.",
-	"main": "index.js",
-	"scripts": {
-		"dev": "live-server",
-		"less": "less-watch-compiler",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/MrToro/beatsby-dre-landing-page.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/MrToro/beatsby-dre-landing-page/issues"
-	},
-	"homepage": "https://github.com/MrToro/beatsby-dre-landing-page#readme"
+  "name": "beatsbe-dre",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
 }
