@@ -15,8 +15,12 @@ import Product2 from "../../../../assets/product-2.png";
 import Product3 from "../../../../assets/product-3.png";
 import Product4 from "../../../../assets/product-4.png";
 import Product5 from "../../../../assets/product-5.png";
+import { useContext } from "react";
+import { CursorContext } from "../../..";
 
 export const Products = () => {
+	const { setHovered } = useContext(CursorContext);
+
 	return (
 		<Wrapper id="products-section" className="container">
 			<Title>
@@ -33,7 +37,11 @@ export const Products = () => {
 							<ProductTitle>Black</ProductTitle>
 							<ProductReference>N299K</ProductReference>
 						</div>
-						<ProductButton $variant={true}>
+						<ProductButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+							$variant={true}
+						>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -51,7 +59,11 @@ export const Products = () => {
 							<ProductTitle>Red Black</ProductTitle>
 							<ProductReference>N299K</ProductReference>
 						</div>
-						<ProductButton $variant={true}>
+						<ProductButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+							$variant={true}
+						>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -69,7 +81,11 @@ export const Products = () => {
 							<ProductTitle>Night Black</ProductTitle>
 							<ProductReference>N299K</ProductReference>
 						</div>
-						<ProductButton $variant={true}>
+						<ProductButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+							$variant={true}
+						>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -87,7 +103,11 @@ export const Products = () => {
 							<ProductTitle>Blue</ProductTitle>
 							<ProductReference>N299K</ProductReference>
 						</div>
-						<ProductButton $variant={true}>
+						<ProductButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+							$variant={true}
+						>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -105,7 +125,11 @@ export const Products = () => {
 							<ProductTitle>Twilight Gray</ProductTitle>
 							<ProductReference>N299K</ProductReference>
 						</div>
-						<ProductButton $variant={true}>
+						<ProductButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+							$variant={true}
+						>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}

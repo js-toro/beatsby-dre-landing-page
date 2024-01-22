@@ -1,12 +1,14 @@
 import gsap from "gsap";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { Wrapper, NavigationMenu, Link } from "./Header.styles";
 
 import { HomeLink } from "./HomeLink";
 import { NavigationButton } from "./NavigationButton";
+import { CursorContext } from "..";
 
 export const Header = () => {
+	const { setHovered } = useContext(CursorContext);
 	const [navigationMenuState, setNavigationMenuState] = useState(false);
 
 	const handleNavigationMenu = () => {
@@ -33,6 +35,8 @@ export const Header = () => {
 
 			<NavigationMenu $active={navigationMenuState}>
 				<Link
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#home-section");
@@ -41,6 +45,8 @@ export const Header = () => {
 					Home
 				</Link>
 				<Link
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#specs-section");
@@ -49,6 +55,8 @@ export const Header = () => {
 					Specs
 				</Link>
 				<Link
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#case-section");
@@ -57,6 +65,8 @@ export const Header = () => {
 					Case
 				</Link>
 				<Link
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#products-section");

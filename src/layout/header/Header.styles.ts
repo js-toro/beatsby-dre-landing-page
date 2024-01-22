@@ -69,7 +69,6 @@ export const Link = styled.a`
 	text-decoration: none;
 
 	&:hover {
-		color: ${Colors.whiteAlpa};
 		cursor: pointer;
 	}
 `;
