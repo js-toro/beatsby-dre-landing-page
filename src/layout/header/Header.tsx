@@ -10,6 +10,8 @@ import {
 import HamburguerIcon from "./assets/hamburger-icon.svg";
 import { HomeLink } from "../../components/HomeLink";
 
+import gsap from "gsap";
+
 export const Header = () => {
 	const [navigationMenuState, setNavigationMenuState] = useState(false);
 
@@ -21,21 +23,55 @@ export const Header = () => {
 		setNavigationMenuState(false);
 	};
 
+	const scrollToSection = (section: string) => {
+		gsap.to(window, {
+			duration: 1,
+			scrollTo: {
+				y: section,
+				offsetY: 56,
+			},
+		});
+	};
+
 	return (
 		<Wrapper className="container">
 			<HomeLink />
 
 			<NavigationMenu $active={navigationMenuState}>
-				<Link href="#home-section" onClick={closeNavigationMenu}>
+				<Link
+					className="link"
+					onClick={() => {
+						closeNavigationMenu();
+						scrollToSection("#home-section");
+					}}
+				>
 					Home
 				</Link>
-				<Link href="#specs-section" onClick={closeNavigationMenu}>
+				<Link
+					className="link"
+					onClick={() => {
+						closeNavigationMenu();
+						scrollToSection("#specs-section");
+					}}
+				>
 					Specs
 				</Link>
-				<Link href="#case-section" onClick={closeNavigationMenu}>
+				<Link
+					className="link"
+					onClick={() => {
+						closeNavigationMenu();
+						scrollToSection("#case-section");
+					}}
+				>
 					Case
 				</Link>
-				<Link href="#products-section" onClick={closeNavigationMenu}>
+				<Link
+					className="link"
+					onClick={() => {
+						closeNavigationMenu();
+						scrollToSection("#products-section");
+					}}
+				>
 					Products
 				</Link>
 			</NavigationMenu>

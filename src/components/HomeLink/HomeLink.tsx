@@ -18,7 +18,7 @@ export const HomeLink = () => {
 
 	return (
 		<div>
-			<a href="#" onClick={handleClick}>
+			<a href="#" onMouseOver={handleClick}>
 				<img
 					ref={logoRef}
 					draggable="false"
