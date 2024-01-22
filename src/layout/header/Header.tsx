@@ -1,16 +1,10 @@
+import gsap from "gsap";
 import { useState } from "react";
 
-import {
-	Wrapper,
-	NavigationMenu,
-	NavegationButton,
-	Link,
-} from "./Header.styles";
+import { Wrapper, NavigationMenu, Link } from "./Header.styles";
 
-import HamburguerIcon from "../../assets/hamburger-icon.svg";
 import { HomeLink } from "./HomeLink";
-
-import gsap from "gsap";
+import { NavigationButton } from "./NavigationButton";
 
 export const Header = () => {
 	const [navigationMenuState, setNavigationMenuState] = useState(false);
@@ -35,11 +29,10 @@ export const Header = () => {
 
 	return (
 		<Wrapper className="container">
-			<HomeLink />
+			<HomeLink scrollToSection={scrollToSection} />
 
 			<NavigationMenu $active={navigationMenuState}>
 				<Link
-					className="link"
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#home-section");
@@ -48,7 +41,6 @@ export const Header = () => {
 					Home
 				</Link>
 				<Link
-					className="link"
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#specs-section");
@@ -57,7 +49,6 @@ export const Header = () => {
 					Specs
 				</Link>
 				<Link
-					className="link"
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#case-section");
@@ -66,7 +57,6 @@ export const Header = () => {
 					Case
 				</Link>
 				<Link
-					className="link"
 					onClick={() => {
 						closeNavigationMenu();
 						scrollToSection("#products-section");
@@ -76,13 +66,7 @@ export const Header = () => {
 				</Link>
 			</NavigationMenu>
 
-			<NavegationButton onClick={handleNavigationMenu}>
-				<img
-					draggable="false"
-					src={HamburguerIcon}
-					alt="Beatsby Hamburger Icon"
-				/>
-			</NavegationButton>
+			<NavigationButton onClick={handleNavigationMenu} />
 		</Wrapper>
 	);
 };
