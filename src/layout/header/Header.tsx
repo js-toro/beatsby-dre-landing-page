@@ -2,14 +2,13 @@ import { useState } from "react";
 
 import {
 	Wrapper,
-	HomeLink,
 	NavigationMenu,
 	NavegationButton,
 	Link,
 } from "./Header.styles";
 
-import BeatsbyDreLogo from "./assets/beatsby-logo.png";
 import HamburguerIcon from "./assets/hamburger-icon.svg";
+import { HomeLink } from "../../components/HomeLink";
 
 export const Header = () => {
 	const [navigationMenuState, setNavigationMenuState] = useState(false);
@@ -18,19 +17,27 @@ export const Header = () => {
 		setNavigationMenuState(!navigationMenuState);
 	};
 
+	const closeNavigationMenu = () => {
+		setNavigationMenuState(false);
+	};
+
 	return (
 		<Wrapper className="container">
-			<HomeLink>
-				<a href="#">
-					<img draggable="false" src={BeatsbyDreLogo} alt="Beatsby Logo" />
-				</a>
-			</HomeLink>
+			<HomeLink />
 
 			<NavigationMenu $active={navigationMenuState}>
-				<Link href="#home-section">Home</Link>
-				<Link href="#specs-section">Specs</Link>
-				<Link href="#case-section">Case</Link>
-				<Link href="#products-section">Products</Link>
+				<Link href="#home-section" onClick={closeNavigationMenu}>
+					Home
+				</Link>
+				<Link href="#specs-section" onClick={closeNavigationMenu}>
+					Specs
+				</Link>
+				<Link href="#case-section" onClick={closeNavigationMenu}>
+					Case
+				</Link>
+				<Link href="#products-section" onClick={closeNavigationMenu}>
+					Products
+				</Link>
 			</NavigationMenu>
 
 			<NavegationButton onClick={handleNavigationMenu}>

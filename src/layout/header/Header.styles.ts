@@ -16,16 +16,6 @@ export const Wrapper = styled.header`
 	}
 `;
 
-export const HomeLink = styled.div`
-	img {
-		filter: opacity(1);
-		transition: filter 0.3s ease;
-
-		&:hover {
-			filter: opacity(0.5);
-		}
-	}
-`;
 
 export const NavigationMenu = styled.nav<{ $active: Boolean }>`
 	display: none;
