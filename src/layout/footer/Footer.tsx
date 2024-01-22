@@ -12,11 +12,11 @@ import {
 	Support,
 } from "./Footer.styles";
 
-import BeatsbeLogo from "./assets/beatsby-logo.png";
-import FacebookIcon from "./assets/facebook-icon.svg";
-import TwitterIcon from "./assets/twitter-icon.svg";
-import InstagramIcon from "./assets/instagram-icon.svg";
-import LinkedinIcon from "./assets/linkedin-icon.svg";
+import BeatsbeLogo from "../../assets/beatsby-logo.png";
+import FacebookIcon from "../../assets/facebook-icon.svg";
+import TwitterIcon from "../../assets/twitter-icon.svg";
+import InstagramIcon from "../../assets/instagram-icon.svg";
+import LinkedinIcon from "../../assets/linkedin-icon.svg";
 
 export const Footer = () => {
 	return (

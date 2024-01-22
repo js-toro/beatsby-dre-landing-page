@@ -6,7 +6,8 @@ import {
 	Title,
 	Wrapper,
 } from "./Case.styles";
-import CaseImage from "./assets/case-image.png";
+
+import CaseImage from "../../../../assets/case-image.png";
 
 export const Case = () => {
 	return (

@@ -4,7 +4,8 @@ import {
 	InfoContainer,
 	Wrapper,
 } from "./Discount.styles";
-import DiscountImage from "./assets/discount-image.png";
+
+import DiscountImage from "../../../../assets/discount-image.png";
 
 export const Discount = () => {
 	return (

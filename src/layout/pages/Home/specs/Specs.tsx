@@ -9,11 +9,11 @@ import {
 } from "./Specs.styles";
 
 // import all images
-import BluetoothIcon from "./assets/bluetooth-icon.svg";
-import BatteryIcon from "./assets/battery-charging-icon.svg";
-import PlugIcon from "./assets/plug-icon.svg";
-import MicIcon from "./assets/mic-icon.svg";
-import SpecsImage from "./assets/specs-image.png";
+import BluetoothIcon from "../../../../assets/bluetooth-icon.svg";
+import BatteryIcon from "../../../../assets/battery-charging-icon.svg";
+import PlugIcon from "../../../../assets/plug-icon.svg";
+import MicIcon from "../../../../assets/mic-icon.svg";
+import SpecsImage from "../../../../assets/specs-image.png";
 
 export const Specs = () => {
 	return (

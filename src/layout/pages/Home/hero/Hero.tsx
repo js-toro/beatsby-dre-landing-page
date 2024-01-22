@@ -8,11 +8,11 @@ import {
 	Stores,
 } from "./Hero.styles";
 
-import HeroPng from "./assets/hero.png";
-import AmazonLogo from "./assets/amazon-logo.png";
-import AppleLogo from "./assets/apple-logo.png";
-import Spotify from "./assets/spotify-logo.png";
-import Youtube from "./assets/youtube-logo.png";
+import HeroPng from "../../../../assets/hero.png";
+import AmazonLogo from "../../../../assets/amazon-logo.png";
+import AppleLogo from "../../../../assets/apple-logo.png";
+import Spotify from "../../../../assets/spotify-logo.png";
+import Youtube from "../../../../assets/youtube-logo.png";
 
 export const Hero = () => {
 	return (

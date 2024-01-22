@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Colors, Button } from "../../styles";
-
 import { Breakpoints } from "../../styles";
-import SendIcon from "./assets/send-icon.svg";
+
+import SendIcon from "../../assets/send-icon.svg";
 
 export const Wrapper = styled.footer`
 	margin: 2.4rem auto;

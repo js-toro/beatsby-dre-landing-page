@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Breakpoints, Button, Colors } from "../../../../styles";
 
-import ShoppingBag from "./assets/shopping-bag-icon.svg";
+import ShoppingBag from "../../../../assets/shopping-bag-icon.svg";
 
 export const Wrapper = styled.div`
 	margin: 0 auto;

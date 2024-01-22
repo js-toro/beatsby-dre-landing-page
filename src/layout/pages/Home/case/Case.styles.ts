@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Breakpoints, Button } from "../../../../styles";
 
-import AlertIcon from "./assets/alert-icon.svg";
+import AlertIcon from "../../../../assets/alert-icon.svg";
 
 export const Wrapper = styled.section`
 	margin: 0 auto;

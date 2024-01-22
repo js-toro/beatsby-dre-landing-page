@@ -7,8 +7,8 @@ import {
 	Link,
 } from "./Header.styles";
 
-import HamburguerIcon from "./assets/hamburger-icon.svg";
-import { HomeLink } from "../../components/HomeLink";
+import HamburguerIcon from "../../assets/hamburger-icon.svg";
+import { HomeLink } from "./HomeLink";
 
 import gsap from "gsap";
 

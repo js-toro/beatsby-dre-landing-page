@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import BeatsbyDreLogo from "./assets/beatsby-logo.png";
+import BeatsbyDreLogo from "../../../assets/beatsby-logo.png";
 import gsap from "gsap";
 import styled from "styled-components";
 

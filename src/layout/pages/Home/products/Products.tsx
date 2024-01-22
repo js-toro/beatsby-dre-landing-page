@@ -9,12 +9,12 @@ import {
 	Wrapper,
 } from "./Products.styles";
 
-import ShoppingBagIcon from "./assets/shopping-bag-icon.svg";
-import Product1 from "./assets/product-1.png";
-import Product2 from "./assets/product-2.png";
-import Product3 from "./assets/product-3.png";
-import Product4 from "./assets/product-4.png";
-import Product5 from "./assets/product-5.png";
+import ShoppingBagIcon from "../../../../assets/shopping-bag-icon.svg";
+import Product1 from "../../../../assets/product-1.png";
+import Product2 from "../../../../assets/product-2.png";
+import Product3 from "../../../../assets/product-3.png";
+import Product4 from "../../../../assets/product-4.png";
+import Product5 from "../../../../assets/product-5.png";
 
 export const Products = () => {
 	return (
