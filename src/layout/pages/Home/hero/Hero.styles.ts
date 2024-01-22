@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Breakpoints, Button } from "../../../../styles";
 
-import bag from "../../../../assets/shopping-bag-icon.svg";
-
 export const Wrapper = styled.section`
 	display: grid;
 	margin: 0 auto;
@@ -125,8 +123,7 @@ export const CTA = styled(Button)`
 	align-items: center;
 	gap: 1.5rem;
 
-	&::before {
-		content: url(${bag});
+	img {
 		position: relative;
 		top: 0.1rem;
 		width: 3rem;
