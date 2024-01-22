@@ -1,4 +1,4 @@
-# Francois Boucher
+# Beatsby Dre
 
 Creation of a landing page responsive using the technologies of:<br>
 
