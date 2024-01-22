@@ -113,10 +113,6 @@ export const GlobalStyle = createGlobalStyle`
 		font-size: 1.5rem;
 		line-height: 2.2rem;
 		transition: color 0.3s ease;
-
-		&:hover {
-			color: ${Colors.whiteAlpa};
-		}
 	}
 `;
 

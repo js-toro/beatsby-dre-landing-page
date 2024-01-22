@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import BeatsbyDreLogo from "../../../assets/beatsby-logo.png";
 import styled from "styled-components";
+import { CursorContext } from "../..";
 
 const Wrapper = styled.div`
 	display: grid;
@@ -18,9 +19,15 @@ interface HomeLinkProps {
 }
 
 export const HomeLink: React.FC<HomeLinkProps> = ({ scrollToSection }) => {
+	const { setHovered } = useContext(CursorContext);
+
 	return (
 		<Wrapper>
-			<a onClick={() => scrollToSection("#home-section")}>
+			<a
+				onMouseEnter={() => setHovered(true)}
+				onMouseLeave={() => setHovered(false)}
+				onClick={() => scrollToSection("#home-section")}
+			>
 				<img src={BeatsbyDreLogo} draggable="false" alt="Beatsby Logo" />
 			</a>
 		</Wrapper>

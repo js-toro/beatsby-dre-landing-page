@@ -1,6 +1,7 @@
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
+import { CursorContext } from "../layout";
 
 const Wrapper = styled.div`
 	top: 0;
@@ -14,13 +15,15 @@ const Wrapper = styled.div`
 `;
 
 const Ball = styled.div`
-	width: 50px;
-	height: 50px;
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
 	background-color: #fff;
+	transform: translate(-100px, -100px);
 `;
 
 export const CursorBall = () => {
+	const { hovered } = useContext(CursorContext);
 	const cursor = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -37,6 +40,20 @@ export const CursorBall = () => {
 			});
 		});
 	}, []);
+
+	useEffect(() => {
+		if (hovered) {
+			gsap.to(cursor.current, {
+				duration: 0.3,
+				scale: 10,
+			});
+		} else {
+			gsap.to(cursor.current, {
+				duration: 0.3,
+				scale: 1,
+			});
+		}
+	}, [hovered]);
 
 	return (
 		<Wrapper>

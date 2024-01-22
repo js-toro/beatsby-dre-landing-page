@@ -14,8 +14,12 @@ import AppleLogo from "../../../../assets/apple-logo.png";
 import Spotify from "../../../../assets/spotify-logo.png";
 import Youtube from "../../../../assets/youtube-logo.png";
 import bag from "../../../../assets/shopping-bag-icon.svg";
+import { CursorContext } from "../../..";
+import { useContext } from "react";
 
 export const Hero = () => {
+	const { setHovered } = useContext(CursorContext);
+
 	return (
 		<Wrapper id="home-section" className="container">
 			<div>
@@ -34,7 +38,10 @@ export const Hero = () => {
 					sleek, streamlined design with comfortable padded earphones,
 					delivering first-rate playback.
 				</HeroDescription>
-				<CTA>
+				<CTA
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+				>
 					<img src={bag} alt="Bag icon" />
 					Add to Bag <span>N399K</span>
 				</CTA>

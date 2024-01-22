@@ -9,8 +9,12 @@ import {
 
 import CaseImage from "../../../../assets/case-image.png";
 import AlertIcon from "../../../../assets/alert-icon.svg";
+import { useContext } from "react";
+import { CursorContext } from "../../..";
 
 export const Case = () => {
+	const { setHovered } = useContext(CursorContext);
+
 	return (
 		<Wrapper id="case-section" className="container">
 			<Title>Case</Title>
@@ -29,7 +33,10 @@ export const Case = () => {
 						With a comfortable and adaptable case so that you can store it
 						whenever you want, and keep your durability forever.
 					</p>
-					<CaseButton>
+					<CaseButton
+						onMouseEnter={() => setHovered(true)}
+						onMouseLeave={() => setHovered(false)}
+					>
 						<img src={AlertIcon} alt="Alert icon" /> More info
 					</CaseButton>
 				</CaseInfoContainer>

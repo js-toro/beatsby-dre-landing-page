@@ -17,13 +17,21 @@ import FacebookIcon from "../../assets/facebook-icon.svg";
 import TwitterIcon from "../../assets/twitter-icon.svg";
 import InstagramIcon from "../../assets/instagram-icon.svg";
 import LinkedinIcon from "../../assets/linkedin-icon.svg";
+import { CursorContext } from "..";
+import { useContext } from "react";
 
 export const Footer = () => {
+	const { setHovered } = useContext(CursorContext);
+
 	return (
 		<Wrapper className="container">
 			<Grid>
 				<HomeImage>
-					<a href="#">
+					<a
+						href="#"
+						onMouseEnter={() => setHovered(true)}
+						onMouseLeave={() => setHovered(false)}
+					>
 						<img draggable="false" src={BeatsbeLogo} alt="Beatsby Logo" />
 					</a>
 				</HomeImage>
@@ -31,38 +39,104 @@ export const Footer = () => {
 				<Links>
 					<Products>
 						<h3>Products</h3>
-						<a href="#">Headphones</a>
-						<a href="#">Earphones</a>
-						<a href="#">Earbuds</a>
-						<a href="#">Accessories</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Headphones
+						</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Earphones
+						</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Earbuds
+						</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Accessories
+						</a>
 					</Products>
 
 					<Support>
 						<h3>Supports</h3>
-						<a href="#">Product help</a>
-						<a href="#">Register</a>
-						<a href="#">Updates</a>
-						<a href="#">Provides</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Product help
+						</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Register
+						</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Updates
+						</a>
+						<a
+							href="#"
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
+							Provides
+						</a>
 					</Support>
 				</Links>
 
 				<div>
 					<Subscribe>
 						<input type="text" placeholder="Email" />
-						<SubscribeButton $variant={true}>Subscribe</SubscribeButton>
+						<SubscribeButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+							$variant={true}
+						>
+							Subscribe
+						</SubscribeButton>
 					</Subscribe>
 
 					<Socials>
-						<SocialButton>
+						<SocialButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
 							<img src={FacebookIcon} alt="Facebook logo" />
 						</SocialButton>
-						<SocialButton>
+						<SocialButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
 							<img src={TwitterIcon} alt="Twitter logo" />
 						</SocialButton>
-						<SocialButton>
+						<SocialButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
 							<img src={InstagramIcon} alt="Instagram logo" />
 						</SocialButton>
-						<SocialButton>
+						<SocialButton
+							onMouseEnter={() => setHovered(true)}
+							onMouseLeave={() => setHovered(false)}
+						>
 							<img src={LinkedinIcon} alt="Linkedin logo" />
 						</SocialButton>
 					</Socials>
