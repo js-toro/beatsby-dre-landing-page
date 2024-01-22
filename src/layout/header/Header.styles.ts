@@ -12,10 +12,8 @@ export const Wrapper = styled.header`
 
 	@media (min-width: ${Breakpoints.tablet.medium}) {
 		margin: 4rem auto;
-		position: absolute;
 	}
 `;
-
 
 export const NavigationMenu = styled.nav<{ $active: Boolean }>`
 	display: none;
@@ -72,6 +70,7 @@ export const Link = styled.a`
 
 	&:hover {
 		color: ${Colors.whiteAlpa};
+		cursor: pointer;
 	}
 `;
 
