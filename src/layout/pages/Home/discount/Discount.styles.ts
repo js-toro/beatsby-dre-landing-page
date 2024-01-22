@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Breakpoints, Button, Colors } from "../../../../styles";
 
-import ShoppingBag from "../../../../assets/shopping-bag-icon.svg";
-
 export const Wrapper = styled.div`
 	margin: 0 auto;
 	background-color: ${Colors.backgroundVariant};
@@ -56,8 +54,7 @@ export const DiscountButton = styled(Button)`
 	align-items: center;
 	gap: 1.5rem;
 
-	&::before {
-		content: url(${ShoppingBag});
+	img {
 		position: relative;
 		top: 0.1rem;
 		width: 3rem;

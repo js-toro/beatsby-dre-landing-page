@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Breakpoints, Button } from "../../../../styles";
 
-import AlertIcon from "../../../../assets/alert-icon.svg";
-
 export const Wrapper = styled.section`
 	margin: 0 auto;
 	margin-bottom: 6rem;
@@ -81,8 +79,7 @@ export const CaseButton = styled(Button)`
 	align-items: center;
 	gap: 1.5rem;
 
-	&::before {
-		content: url(${AlertIcon});
+	img {
 		position: relative;
 		top: 0.1rem;
 		width: 3rem;

@@ -6,6 +6,7 @@ import {
 } from "./Discount.styles";
 
 import DiscountImage from "../../../../assets/discount-image.png";
+import ShoppingBag from "../../../../assets/shopping-bag-icon.svg";
 
 export const Discount = () => {
 	return (
@@ -13,7 +14,10 @@ export const Discount = () => {
 			<InfoContainer>
 				<h3>Immerse yourself in your music</h3>
 				<p>Buy Now, up to 40% off.</p>
-				<DiscountButton $variant={true}>Buy now</DiscountButton>
+				<DiscountButton $variant={true}>
+					<img src={ShoppingBag} alt={"Shopping Bag Icon"} />
+					Buy now
+				</DiscountButton>
 			</InfoContainer>
 
 			<DiscountImageContainer>
