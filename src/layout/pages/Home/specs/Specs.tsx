@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 
 import {
@@ -26,8 +26,8 @@ export const Specs = () => {
 			ease: "none",
 			scrollTrigger: {
 				trigger: ".title",
-				start: "bottom 100%",
-				end: "bottom 50%",
+				start: "center 100%",
+				end: "center 50%",
 				scrub: true,
 			},
 		});
@@ -40,8 +40,8 @@ export const Specs = () => {
 				ease: "none",
 				scrollTrigger: {
 					trigger: text,
-					start: "bottom 100%",
-					end: "bottom 80%",
+					start: "center 100%",
+					end: "center 80%",
 					scrub: true,
 				},
 			});
@@ -60,8 +60,8 @@ export const Specs = () => {
 			ease: "none",
 			scrollTrigger: {
 				trigger: ".image",
-				start: "bottom 100%",
-				end: "bottom 70%",
+				start: "center 100%",
+				end: "center 70%",
 				scrub: true,
 			},
 		});
