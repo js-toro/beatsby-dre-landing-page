@@ -11,6 +11,8 @@ import {
 	Wrapper,
 } from "./Specs.styles";
 
+import { animateImage, animateSpecs, animateTitle } from "./Specs.animations";
+
 // import all images
 import BluetoothIcon from "../../../../assets/bluetooth-icon.svg";
 import BatteryIcon from "../../../../assets/battery-charging-icon.svg";
@@ -20,51 +22,12 @@ import SpecsImage from "../../../../assets/specs-image.png";
 
 export const Specs = () => {
 	useEffect(() => {
-		gsap.to(".title", {
-			opacity: 1,
-			y: 0,
-			ease: "none",
-			scrollTrigger: {
-				trigger: ".title",
-				start: "center 100%",
-				end: "center 50%",
-				scrub: true,
-			},
-		});
+		animateTitle();
 
 		const specElements = gsap.utils.toArray<HTMLDivElement>(".spec");
-		specElements.forEach((text) => {
-			gsap.to(text, {
-				opacity: 1,
-				x: 0,
-				ease: "none",
-				scrollTrigger: {
-					trigger: text,
-					start: "center 100%",
-					end: "center 80%",
-					scrub: true,
-				},
-			});
-		});
+		animateSpecs(specElements);
 
-		gsap.to(".image", {
-			y: -25,
-			duration: 7,
-			repeat: -1,
-			yoyo: true,
-			ease: "none",
-		});
-
-		gsap.to(".image img", {
-			opacity: 1,
-			ease: "none",
-			scrollTrigger: {
-				trigger: ".image",
-				start: "center 100%",
-				end: "center 70%",
-				scrub: true,
-			},
-		});
+		animateImage();
 	}, []);
 
 	return (

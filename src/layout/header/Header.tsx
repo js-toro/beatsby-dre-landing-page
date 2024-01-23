@@ -1,11 +1,11 @@
-import gsap from "gsap";
 import { useContext, useState } from "react";
+import { CursorContext } from "..";
 
 import { Wrapper, NavigationMenu, Link } from "./Header.styles";
+import { scrollToSection } from "./Header.animations";
 
 import { HomeLink } from "./HomeLink";
 import { NavigationButton } from "./NavigationButton";
-import { CursorContext } from "..";
 
 export const Header = () => {
 	const { setHovered } = useContext(CursorContext);
@@ -17,16 +17,6 @@ export const Header = () => {
 
 	const closeNavigationMenu = () => {
 		setNavigationMenuState(false);
-	};
-
-	const scrollToSection = (section: string) => {
-		gsap.to(window, {
-			duration: 1,
-			scrollTo: {
-				y: section,
-				offsetY: 56,
-			},
-		});
 	};
 
 	return (

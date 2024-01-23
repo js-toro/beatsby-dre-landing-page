@@ -19,41 +19,16 @@ import Spotify from "../../../../assets/spotify-logo.png";
 import Youtube from "../../../../assets/youtube-logo.png";
 import bag from "../../../../assets/shopping-bag-icon.svg";
 
+import { animateImage, animateHeadingTextOut } from "./Hero.animations";
+
 export const Hero = () => {
 	const { setHovered } = useContext(CursorContext);
 
-	const animationDelay = 3;
-	const animationDuration = 0.25;
-	const displacement = -100;
-
-	const animateImage = (image: HTMLImageElement, delay: number) => {
-		gsap.to(image, {
-			y: 0,
-			duration: animationDuration,
-			delay: delay,
-			onComplete: () => animateImageOut(image),
-		});
-	};
-
-	const animateImageOut = (image: HTMLImageElement) => {
-		gsap.to(image, {
-			x: displacement,
-			duration: animationDuration,
-			delay: animationDelay,
-			onComplete: () => resetImagePosition(image),
-		});
-	};
-
-	const resetImagePosition = (image: HTMLImageElement) => {
-		gsap.set(image, { x: 0, y: displacement });
-		animateImage(image, 0);
-	};
-
 	useEffect(() => {
+		animateHeadingTextOut(".heading-text");
+
 		const imageElements = gsap.utils.toArray<HTMLImageElement>(".stores-image");
-		imageElements.forEach((image, index) => {
-			animateImage(image, index * animationDuration);
-		});
+		animateImage(imageElements);
 	}, []);
 
 	return (
@@ -67,7 +42,10 @@ export const Hero = () => {
 			</div>
 
 			<div>
-				<HeroTitle>Beats 3</HeroTitle>
+				<HeroTitle>
+					<span className="heading-text">Beat The World!</span>
+					<span>On Ear</span>
+				</HeroTitle>
 				<HeroSubtitle>Overview</HeroSubtitle>
 				<HeroDescription>
 					Enjoy award-winning Beats sound with wireless listening freedom and a

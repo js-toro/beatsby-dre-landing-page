@@ -61,7 +61,7 @@ export const HeroTitle = styled.h1`
 		font-size: 6.4rem;
 	}
 
-	&::before {
+	span:last-child {
 		content: "On ear";
 		position: absolute;
 		top: -6rem;
