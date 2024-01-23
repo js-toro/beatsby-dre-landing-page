@@ -2,8 +2,8 @@ import { GlobalStyle } from "./styles";
 import { Layout } from "./layout";
 
 import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-gsap.registerPlugin(ScrollToPlugin);
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 const App = () => {
 	return (

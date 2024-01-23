@@ -1,3 +1,6 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 import {
 	Grid,
 	Image,
@@ -16,13 +19,61 @@ import MicIcon from "../../../../assets/mic-icon.svg";
 import SpecsImage from "../../../../assets/specs-image.png";
 
 export const Specs = () => {
+	useEffect(() => {
+		gsap.to(".title", {
+			opacity: 1,
+			y: 0,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".title",
+				start: "bottom 100%",
+				end: "bottom 50%",
+				scrub: true,
+			},
+		});
+
+		const specElements = gsap.utils.toArray<HTMLDivElement>(".spec");
+		specElements.forEach((text) => {
+			gsap.to(text, {
+				opacity: 1,
+				x: 0,
+				ease: "none",
+				scrollTrigger: {
+					trigger: text,
+					start: "bottom 100%",
+					end: "bottom 80%",
+					scrub: true,
+				},
+			});
+		});
+
+		gsap.to(".image", {
+			y: -25,
+			duration: 7,
+			repeat: -1,
+			yoyo: true,
+			ease: "none",
+		});
+
+		gsap.to(".image img", {
+			opacity: 1,
+			ease: "none",
+			scrollTrigger: {
+				trigger: ".image",
+				start: "bottom 100%",
+				end: "bottom 70%",
+				scrub: true,
+			},
+		});
+	}, []);
+
 	return (
 		<Wrapper id="specs-section" className="container">
-			<Title>Specs</Title>
+			<Title className="title">Specs</Title>
 
 			<Grid>
 				<div>
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={BluetoothIcon} alt="Bluetooth Icon" />
 						</span>
@@ -32,7 +83,7 @@ export const Specs = () => {
 						</SpecDescription>
 					</Spec>
 
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={BatteryIcon} alt="Battery Icon" />
 						</span>
@@ -42,7 +93,7 @@ export const Specs = () => {
 						</SpecDescription>
 					</Spec>
 
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={PlugIcon} alt="Plug Icon" />
 						</span>
@@ -52,7 +103,7 @@ export const Specs = () => {
 						</SpecDescription>
 					</Spec>
 
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={MicIcon} alt="Mic Icon" />
 						</span>
@@ -61,7 +112,7 @@ export const Specs = () => {
 					</Spec>
 				</div>
 
-				<Image>
+				<Image className="image">
 					<img
 						src={SpecsImage}
 						alt="A beautiful headphones"

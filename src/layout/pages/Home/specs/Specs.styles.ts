@@ -13,6 +13,10 @@ export const Wrapper = styled.section`
 `;
 
 export const Title = styled.h2`
+	opacity: 0;
+	transform: translateY(100%);
+	transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+
 	@media (min-width: ${Breakpoints.tablet.medium}) {
 		font-weight: 400;
 		font-size: 7.2rem;
@@ -32,11 +36,19 @@ export const Image = styled.div`
 	position: relative;
 	top: -25px;
 	right: -5rem;
+
+	img {
+		opacity: 0;
+		transition: opacity cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+	}
 `;
 
 export const Spec = styled.div`
 	margin-bottom: 2rem;
 	position: relative;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
 
 	&:first-child,
 	&:last-child {
