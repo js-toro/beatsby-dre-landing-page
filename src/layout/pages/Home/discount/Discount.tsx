@@ -1,3 +1,6 @@
+import { useContext, useEffect } from "react";
+import { CursorContext } from "../../..";
+
 import {
 	DiscountButton,
 	DiscountImageContainer,
@@ -7,17 +10,21 @@ import {
 
 import DiscountImage from "../../../../assets/discount-image.png";
 import ShoppingBag from "../../../../assets/shopping-bag-icon.svg";
-import { useContext } from "react";
-import { CursorContext } from "../../..";
+import { animateDiscount, animateDiscountWrapper } from "./Discount.animations";
 
 export const Discount = () => {
 	const { setHovered } = useContext(CursorContext);
 
+	useEffect(() => {
+		animateDiscountWrapper();
+		animateDiscount();
+	}, []);
+
 	return (
-		<Wrapper id="discount-section" className="container">
+		<Wrapper id="discount-section" className="container discount-wrapper">
 			<InfoContainer>
 				<h3>Immerse yourself in your music</h3>
-				<p>Buy Now, up to 40% off.</p>
+				<p className="discount">Buy Now, up to 40% off.</p>
 				<DiscountButton
 					onMouseEnter={() => setHovered(true)}
 					onMouseLeave={() => setHovered(false)}

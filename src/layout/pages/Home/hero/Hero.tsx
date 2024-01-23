@@ -1,3 +1,7 @@
+import gsap from "gsap";
+import { useContext, useEffect } from "react";
+import { CursorContext } from "../../..";
+
 import {
 	Wrapper,
 	HeroImage,
@@ -14,11 +18,18 @@ import AppleLogo from "../../../../assets/apple-logo.png";
 import Spotify from "../../../../assets/spotify-logo.png";
 import Youtube from "../../../../assets/youtube-logo.png";
 import bag from "../../../../assets/shopping-bag-icon.svg";
-import { CursorContext } from "../../..";
-import { useContext } from "react";
+
+import { animateImage, animateHeadingTextOut } from "./Hero.animations";
 
 export const Hero = () => {
 	const { setHovered } = useContext(CursorContext);
+
+	useEffect(() => {
+		animateHeadingTextOut(".heading-text");
+
+		const imageElements = gsap.utils.toArray<HTMLImageElement>(".stores-image");
+		animateImage(imageElements);
+	}, []);
 
 	return (
 		<Wrapper id="home-section" className="container">
@@ -31,7 +42,10 @@ export const Hero = () => {
 			</div>
 
 			<div>
-				<HeroTitle>Beats 3</HeroTitle>
+				<HeroTitle>
+					<span className="heading-text">Beat The World!</span>
+					<span>On Ear</span>
+				</HeroTitle>
 				<HeroSubtitle>Overview</HeroSubtitle>
 				<HeroDescription>
 					Enjoy award-winning Beats sound with wireless listening freedom and a
@@ -48,17 +62,53 @@ export const Hero = () => {
 			</div>
 
 			<Stores>
-				<a href="#">
-					<img draggable="false" src={AppleLogo} alt="Apple Logo" />
+				<a
+					href="#"
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+				>
+					<img
+						className="stores-image"
+						draggable="false"
+						src={AppleLogo}
+						alt="Apple Logo"
+					/>
 				</a>
-				<a href="#">
-					<img draggable="false" src={Spotify} alt="Spotify Logo" />
+				<a
+					href="#"
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+				>
+					<img
+						className="stores-image"
+						draggable="false"
+						src={Spotify}
+						alt="Spotify Logo"
+					/>
 				</a>
-				<a href="#">
-					<img draggable="false" src={AmazonLogo} alt="Amazon Logo" />
+				<a
+					href="#"
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+				>
+					<img
+						className="stores-image"
+						draggable="false"
+						src={AmazonLogo}
+						alt="Amazon Logo"
+					/>
 				</a>
-				<a href="#">
-					<img draggable="false" src={Youtube} alt="Youtube Logo" />
+				<a
+					href="#"
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+				>
+					<img
+						className="stores-image"
+						draggable="false"
+						src={Youtube}
+						alt="Youtube Logo"
+					/>
 				</a>
 			</Stores>
 		</Wrapper>

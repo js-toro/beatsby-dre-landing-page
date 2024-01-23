@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import gsap from "gsap";
+
 import {
 	Grid,
 	Image,
@@ -8,6 +11,8 @@ import {
 	Wrapper,
 } from "./Specs.styles";
 
+import { animateImage, animateSpecs, animateTitle } from "./Specs.animations";
+
 // import all images
 import BluetoothIcon from "../../../../assets/bluetooth-icon.svg";
 import BatteryIcon from "../../../../assets/battery-charging-icon.svg";
@@ -16,13 +21,22 @@ import MicIcon from "../../../../assets/mic-icon.svg";
 import SpecsImage from "../../../../assets/specs-image.png";
 
 export const Specs = () => {
+	useEffect(() => {
+		animateTitle();
+
+		const specElements = gsap.utils.toArray<HTMLDivElement>(".spec");
+		animateSpecs(specElements);
+
+		animateImage();
+	}, []);
+
 	return (
 		<Wrapper id="specs-section" className="container">
-			<Title>Specs</Title>
+			<Title className="title">Specs</Title>
 
 			<Grid>
 				<div>
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={BluetoothIcon} alt="Bluetooth Icon" />
 						</span>
@@ -32,7 +46,7 @@ export const Specs = () => {
 						</SpecDescription>
 					</Spec>
 
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={BatteryIcon} alt="Battery Icon" />
 						</span>
@@ -42,7 +56,7 @@ export const Specs = () => {
 						</SpecDescription>
 					</Spec>
 
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={PlugIcon} alt="Plug Icon" />
 						</span>
@@ -52,7 +66,7 @@ export const Specs = () => {
 						</SpecDescription>
 					</Spec>
 
-					<Spec>
+					<Spec className="spec">
 						<span>
 							<img src={MicIcon} alt="Mic Icon" />
 						</span>
@@ -61,7 +75,7 @@ export const Specs = () => {
 					</Spec>
 				</div>
 
-				<Image>
+				<Image className="image">
 					<img
 						src={SpecsImage}
 						alt="A beautiful headphones"

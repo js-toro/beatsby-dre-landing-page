@@ -1,3 +1,6 @@
+import { useContext, useEffect } from "react";
+import { CursorContext } from "../../..";
+
 import {
 	CaseButton,
 	CaseContainer,
@@ -7,21 +10,34 @@ import {
 	Wrapper,
 } from "./Case.styles";
 
+import {
+	animateTitle,
+	animateCaseInfo,
+	animateOnButtonEnter,
+	animateOnButtonExit,
+	animateCaseImage,
+} from "./Case.animations";
+
 import CaseImage from "../../../../assets/case-image.png";
 import AlertIcon from "../../../../assets/alert-icon.svg";
-import { useContext } from "react";
-import { CursorContext } from "../../..";
 
 export const Case = () => {
 	const { setHovered } = useContext(CursorContext);
 
+	useEffect(() => {
+		animateTitle();
+		animateCaseInfo();
+		animateCaseImage();
+	}, []);
+
 	return (
 		<Wrapper id="case-section" className="container">
-			<Title>Case</Title>
+			<Title className="case-title">Case</Title>
 
 			<CaseContainer>
 				<CaseImageContainer>
 					<img
+						className="case-image"
 						src={CaseImage}
 						alt="A beautiful case for your headphones"
 						draggable="false"
@@ -29,15 +45,23 @@ export const Case = () => {
 				</CaseImageContainer>
 
 				<CaseInfoContainer>
-					<p>
+					<p className="case-info">
 						With a comfortable and adaptable case so that you can store it
 						whenever you want, and keep your durability forever.
 					</p>
 					<CaseButton
-						onMouseEnter={() => setHovered(true)}
-						onMouseLeave={() => setHovered(false)}
+						className="case-info"
+						onMouseEnter={() => {
+							setHovered(true);
+							animateOnButtonEnter();
+						}}
+						onMouseLeave={() => {
+							setHovered(false);
+							animateOnButtonExit();
+						}}
 					>
-						<img src={AlertIcon} alt="Alert icon" /> More info
+						<img src={AlertIcon} alt="Alert icon" />{" "}
+						<span className="more-info-text">More info</span>
 					</CaseButton>
 				</CaseInfoContainer>
 			</CaseContainer>

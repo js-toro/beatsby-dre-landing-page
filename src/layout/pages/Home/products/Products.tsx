@@ -1,3 +1,7 @@
+import gsap from "gsap";
+import { useContext, useEffect } from "react";
+import { CursorContext } from "../../..";
+
 import {
 	Grid,
 	Product,
@@ -15,22 +19,38 @@ import Product2 from "../../../../assets/product-2.png";
 import Product3 from "../../../../assets/product-3.png";
 import Product4 from "../../../../assets/product-4.png";
 import Product5 from "../../../../assets/product-5.png";
-import { useContext } from "react";
-import { CursorContext } from "../../..";
+import {
+	animateProduct,
+	animateProductImage,
+	animateProductsTitle,
+} from "./Products.animations";
 
 export const Products = () => {
 	const { setHovered } = useContext(CursorContext);
 
+	useEffect(() => {
+		animateProductsTitle();
+		animateProduct();
+
+		const imageElements =
+			gsap.utils.toArray<HTMLImageElement>(".product-image");
+		animateProductImage(imageElements);
+	}, []);
+
 	return (
 		<Wrapper id="products-section" className="container">
-			<Title>
+			<Title className="products-title">
 				Choose <br />
 				Your Style
 			</Title>
 
 			<Grid>
-				<Product>
-					<img src={Product1} alt="A beautiful headphones" />
+				<Product className="product">
+					<img
+						className="product-image"
+						src={Product1}
+						alt="A beautiful headphones"
+					/>
 
 					<ProductGrid>
 						<div>
@@ -51,8 +71,12 @@ export const Products = () => {
 					</ProductGrid>
 				</Product>
 
-				<Product>
-					<img src={Product2} alt="A beautiful headphones" />
+				<Product className="product">
+					<img
+						className="product-image"
+						src={Product2}
+						alt="A beautiful headphones"
+					/>
 
 					<ProductGrid>
 						<div>
@@ -73,8 +97,12 @@ export const Products = () => {
 					</ProductGrid>
 				</Product>
 
-				<Product>
-					<img src={Product3} alt="A beautiful headphones" />
+				<Product className="product">
+					<img
+						className="product-image"
+						src={Product3}
+						alt="A beautiful headphones"
+					/>
 
 					<ProductGrid>
 						<div>
@@ -95,8 +123,12 @@ export const Products = () => {
 					</ProductGrid>
 				</Product>
 
-				<Product>
-					<img src={Product4} alt="A beautiful headphones" />
+				<Product className="product">
+					<img
+						className="product-image"
+						src={Product4}
+						alt="A beautiful headphones"
+					/>
 
 					<ProductGrid>
 						<div>
@@ -117,8 +149,12 @@ export const Products = () => {
 					</ProductGrid>
 				</Product>
 
-				<Product>
-					<img src={Product5} alt="A beautiful headphones" />
+				<Product className="product">
+					<img
+						className="product-image"
+						src={Product5}
+						alt="A beautiful headphones"
+					/>
 
 					<ProductGrid>
 						<div>

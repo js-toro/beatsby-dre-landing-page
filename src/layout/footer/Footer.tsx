@@ -1,3 +1,6 @@
+import React, { useContext } from "react";
+import { CursorContext } from "..";
+
 import {
 	CopyRight,
 	Grid,
@@ -17,10 +20,8 @@ import FacebookIcon from "../../assets/facebook-icon.svg";
 import TwitterIcon from "../../assets/twitter-icon.svg";
 import InstagramIcon from "../../assets/instagram-icon.svg";
 import LinkedinIcon from "../../assets/linkedin-icon.svg";
-import { CursorContext } from "..";
-import { useContext } from "react";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
 	const { setHovered } = useContext(CursorContext);
 
 	return (
