@@ -1,26 +1,43 @@
-import React, { createContext, useState } from "react";
-import { isMobile } from "react-device-detect";
+/**
+ * Layout.tsx
+ *
+ * This file defines the Layout component that is used to structure the application.
+ * The Layout component includes the Cursor, Header, Home, and Footer.
+ *
+ * @file This file defines the Layout component.
+ * @author [Jose Toro]
+ * @date Created on 23-01-2023
+ */
 
-import { CursorBall } from "../components/CursorBall";
+import React from "react";
+
+import { Cursor } from "../components/Cursor";
 import { Header } from "./header";
 import { Home } from "./pages/Home";
 import { Footer } from "./footer";
 
-export const CursorContext = createContext(
-	{} as { hovered: boolean; setHovered: (hovered: boolean) => void }
-);
-
-export const Layout: React.FC<{ id: string }> = ({ id }) => {
-	const [hovered, setHovered] = useState(false);
-
+/**
+ * Layout Component
+ *
+ * This component returns a layout that includes the Cursor, Header, Home, and Footer.
+ *
+ * @example
+ *
+ * ```typescript
+ * return (
+ *   <Layout />
+ * )
+ * ```
+ *
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 23-01-2023
+ */
+export const Layout: React.FC = () => {
 	return (
-		<div id={id}>
-			<CursorContext.Provider value={{ hovered, setHovered }}>
-				{!isMobile && <CursorBall />}
-				<Header />
-				<Home />
-				<Footer />
-			</CursorContext.Provider>
-		</div>
+		<Cursor>
+			<Header />
+			<Home />
+			<Footer />
+		</Cursor>
 	);
 };

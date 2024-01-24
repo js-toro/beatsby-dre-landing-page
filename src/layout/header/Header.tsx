@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { CursorContext } from "..";
 
+import { CursorContext } from "../../components/Cursor";
 import { Wrapper, NavigationMenu, Link } from "./Header.styles";
 import { scrollToSection } from "./Header.animations";
 

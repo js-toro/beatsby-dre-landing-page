@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
-import BeatsbyDreLogo from "../../../assets/beatsby-logo.png";
+
+import { CursorContext } from "../../../components/Cursor";
 import styled from "styled-components";
-import { CursorContext } from "../..";
+
+import BeatsbyDreLogo from "../../../assets/beatsby-logo.png";
 
 const Wrapper = styled.div`
 	display: grid;

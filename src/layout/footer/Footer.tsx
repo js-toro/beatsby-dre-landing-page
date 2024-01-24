@@ -1,6 +1,16 @@
-import React, { useContext } from "react";
-import { CursorContext } from "..";
+/**
+ * Footer.tsx
+ *
+ * This file contains the Footer component of the application.
+ *
+ * @file This file contains the Footer component of the application.
+ * @author [Jose Toro]
+ * @date Created on 24-01-2024
+ */
 
+import React, { useContext } from "react";
+
+import { CursorContext } from "../../components/Cursor";
 import {
 	CopyRight,
 	Grid,
@@ -21,6 +31,14 @@ import TwitterIcon from "../../assets/twitter-icon.svg";
 import InstagramIcon from "../../assets/instagram-icon.svg";
 import LinkedinIcon from "../../assets/linkedin-icon.svg";
 
+/**
+ * Footer component of the application.
+ *
+ * This component includes links to different sections of the website,
+ * a subscription form, social media links, and copyright information.
+ *
+ * @returns {JSX.Element} The rendered Footer component.
+ */
 export const Footer: React.FC = () => {
 	const { setHovered } = useContext(CursorContext);
 

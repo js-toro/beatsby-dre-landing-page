@@ -1,7 +1,23 @@
+/**
+ * Globals.ts
+ *
+ * Este archivo define los estilos globales y los componentes de estilo comunes para la aplicación.
+ * Utiliza `styled-components` para crear estilos CSS en JS y `createGlobalStyle` para definir estilos globales.
+ *
+ * @file Este archivo define los estilos globales y los componentes de estilo comunes para la aplicación.
+ * @author [Jose Toro]
+ * @date Created on 24-01-2023
+ */
+
 import styled, { createGlobalStyle } from "styled-components";
 import { Colors } from "./Colors";
 import { Breakpoints } from "./Breakpoints";
 
+/**
+ * Define los estilos globales para la aplicación.
+ *
+ * @date Created on 24-01-2023
+ */
 export const GlobalStyle = createGlobalStyle`
 	*,
 	*::before,
@@ -116,6 +132,16 @@ export const GlobalStyle = createGlobalStyle`
 	}
 `;
 
+/**
+ * Define a styled button component. This button has a variant that can be activated by passing a `$variant` prop.
+ *
+ * @example
+ * ```typescript
+ * <Button $variant={true}>Click me</Button>
+ * ```
+ *
+ * @date Created on 24-01-2023
+ */
 export const Button = styled.button<{ $variant?: boolean }>`
 	background: ${Colors.backgroundVariant};
 	color: ${Colors.white};
