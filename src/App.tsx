@@ -10,7 +10,7 @@ const App = () => {
 	return (
 		<>
 			<GlobalStyle />
-			<Layout id="smooth-wrapper" />
+			<Layout />
 		</>
 	);
 };
