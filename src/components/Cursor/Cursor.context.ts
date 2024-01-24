@@ -1,3 +1,15 @@
+/**
+ * Cursor.context.ts
+ *
+ * This file defines the cursor context for the application.
+ *
+ * The cursor context is used to share the cursor state among the application's components.
+ *
+ * @file This file defines the cursor context for the application.
+ * @author [Jose Toro]
+ * @date Created on 23-01-2023
+ */
+
 import { createContext } from "react";
 
 import { CursorContextType } from "./Cursor.types";
@@ -19,6 +31,7 @@ import { CursorContextType } from "./Cursor.types";
  * }
  *
  * @returns {Context} The cursor context
+ * @date Created on 23-01-2023
  */
 export const CursorContext = createContext<CursorContextType>(
 	{} as CursorContextType

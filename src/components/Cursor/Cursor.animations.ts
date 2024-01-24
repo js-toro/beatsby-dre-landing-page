@@ -1,9 +1,20 @@
+/**
+ * Cursor.animations.ts
+ *
+ * This file contains the function to animate the cursor to follow mouse movement.
+ *
+ * @file This file contains the function to animate the cursor to follow mouse movement.
+ * @author [Jose Toro]
+ * @date Created on 23-01-2023
+ */
+
 import { RefObject } from "react";
 import gsap from "gsap";
 
 /**
  * This function animates the cursor to follow the mouse movement.
  * @param cursor - The cursor that is going to be animated.
+ * @date Created on 23-01-2023
  */
 export const animateCursor = (cursor: RefObject<HTMLDivElement>): void => {
 	// We center the cursor at the origin point of the mouse
@@ -27,6 +38,7 @@ export const animateCursor = (cursor: RefObject<HTMLDivElement>): void => {
  * This function animates the size of the cursor when it hovers over an element.
  * @param hovered - If the cursor is hovering over an element.
  * @param cursor - The cursor that is going to be animated.
+ * @date Created on 23-01-2023
  */
 export const animateCursorScale = (
 	hovered: boolean,

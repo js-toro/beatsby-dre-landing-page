@@ -1,8 +1,18 @@
+/**
+ * Cursor.styles.ts
+ *
+ * This file contains the style definitions for the Cursor component.
+ *
+ * @file This file contains the style definitions for the Cursor component.
+ * @author [Jose Toro]
+ * @date Created on 23-01-2023
+ */
+
 import styled from "styled-components";
 
 /**
- * This component is a div that is positioned fixed on the screen.
- * and occupies the entire width and height of the screen.
+ * Este componente es un div que se posiciona de manera fija en la pantalla,
+ * y ocupa todo el ancho y alto de la pantalla.
  */
 export const Wrapper = styled.div`
 	top: 0;
