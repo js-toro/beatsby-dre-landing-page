@@ -11,8 +11,25 @@
 import styled from "styled-components";
 
 /**
- * Este componente es un div que se posiciona de manera fija en la pantalla,
- * y ocupa todo el ancho y alto de la pantalla.
+ * This component is a div that is positioned fixed on the screen,
+ * and occupies the entire width and height of the screen.
+ *
+ * @component
+ * @example
+ * import React from 'react';
+ * import { Wrapper } from './Cursor.styles';
+ *
+ * const MyComponent = () => {
+ * 	return (
+ * 		<Wrapper>
+ * 			<p>Este es un contenido que se mostrará en toda la pantalla.</p>
+ * 		</Wrapper>
+ * 	);
+ * };
+ *
+ * export default MyComponent;
+ *
+ * @date Created on 23-01-2023
  */
 export const Wrapper = styled.div`
 	top: 0;
@@ -27,7 +44,25 @@ export const Wrapper = styled.div`
 
 /**
  * This component is a div that is shaped like a circle
- * and initially positioned off the screen (translate(-100px, -100px)).
+ * and is initially positioned off the screen (translate(-100px, -100px)).
+ *
+ * @date Created on 23-01-2023
+ *
+ * @example
+ * ```typescript
+ * import React from 'react';
+ * import { Ball } from './Cursor.styles';
+ *
+ * const MyComponent = () => {
+ *     return (
+ *         <div>
+ *             <Ball />
+ *         </div>
+ *     );
+ * };
+ *
+ * export default MyComponent;
+ * ```
  */
 export const Ball = styled.div`
 	width: 10px;

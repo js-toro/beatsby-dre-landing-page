@@ -1,3 +1,25 @@
+/**
+ * Colors.ts
+ *
+ * This file contains the color definitions for the application.
+ *
+ * @file This file contains the color definitions for the application.
+ * @author [Jose Toro]
+ * @date Created on 24-01-2023
+ */
+
+/**
+ * Interface that defines the types of colors.
+ *
+ * @property {string} primary - Primary color.
+ * @property {string} secondary - Secondary color.
+ * @property {string} background - Background color.
+ * @property {string} backgroundVariant - Variant of the background color.
+ * @property {string} backgroundAlpa - Background color with transparency.
+ * @property {string} white - White color.
+ * @property {string} whiteAlpa - White color with transparency.
+ * @property {string} light - Light color.
+ */
 export interface ColorsTypes {
 	primary: string;
 	secondary: string;
@@ -9,6 +31,9 @@ export interface ColorsTypes {
 	light: string;
 }
 
+/**
+ * Object that defines the colors used in the application.
+ */
 export const Colors: ColorsTypes = {
 	primary: "hsl(351, 100%, 55%)",
 	secondary: "rgb(179, 22, 45)",
