@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
-import { CursorContext } from "../../..";
 
+import { CursorContext } from "../../../../components/Cursor";
 import {
 	DiscountButton,
 	DiscountImageContainer,

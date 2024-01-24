@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { CursorContext } from "..";
 
+import { CursorContext } from "../../components/Cursor";
 import {
 	CopyRight,
 	Grid,

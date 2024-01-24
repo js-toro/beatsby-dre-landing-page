@@ -1,26 +1,16 @@
-import React, { createContext, useState } from "react";
-import { isMobile } from "react-device-detect";
+import React from "react";
 
-import { CursorBall } from "../components/CursorBall";
+import { Cursor } from "../components/Cursor";
 import { Header } from "./header";
 import { Home } from "./pages/Home";
 import { Footer } from "./footer";
 
-export const CursorContext = createContext(
-	{} as { hovered: boolean; setHovered: (hovered: boolean) => void }
-);
-
-export const Layout: React.FC<{ id: string }> = ({ id }) => {
-	const [hovered, setHovered] = useState(false);
-
+export const Layout: React.FC = () => {
 	return (
-		<div id={id}>
-			<CursorContext.Provider value={{ hovered, setHovered }}>
-				{!isMobile && <CursorBall />}
-				<Header />
-				<Home />
-				<Footer />
-			</CursorContext.Provider>
-		</div>
+		<Cursor>
+			<Header />
+			<Home />
+			<Footer />
+		</Cursor>
 	);
 };
