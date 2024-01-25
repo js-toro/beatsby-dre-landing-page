@@ -1,58 +1,46 @@
-import gsap from 'gsap';
-import { MouseEvent, useRef } from 'react';
+/**
+ * NavigationButton.tsx
+ *
+ * This file contains the Navigation Button component of the application.
+ *
+ * @file This file contains the Navigation Button component of the application.
+ * @author [Jose Toro]
+ * @date Created on 25-01-2024
+ */
 
-import styled from 'styled-components';
-import { Breakpoints } from '../../../styles';
+import { useRef } from 'react';
 
+import { NavigationButtonProps } from './NavigationButton.types';
+import { Wrapper } from './NavigationButton.styles';
+import { handleClick } from './NavigationButton.animations';
 import HamburguerIcon from '../../../assets/hamburger-icon.svg';
 
-const Wrapper = styled.button`
-	justify-self: end;
-	width: fit-content;
-	border: none;
-	background-color: transparent;
-	z-index: 12;
-
-	&:hover {
-		cursor: pointer;
-	}
-
-	img {
-		width: 32px;
-		height: 32px;
-		filter: opacity(1);
-		transition: filter 0.3s ease;
-	}
-
-	@media (min-width: ${Breakpoints.tablet.medium}) {
-		display: none;
-	}
-`;
-
-interface NavigationButtonProps {
-	onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-}
-
+/**
+ * `NavigationButton` is a component that displays a navigation button.
+ * This button uses a hamburger icon to represent the navigation menu.
+ * When clicking on the button, the click animation is activated and the provided `onClick` function is called.
+ *
+ * @param {NavigationButtonProps} props - The properties of the component.
+ * @param {Function} props.onClick - A function that is called when the button is clicked.
+ *
+ * @example
+ * ```tsx
+ * <NavigationButton onClick={() => console.log('Navigation button clicked')} />
+ * ```
+ *
+ * @returns {React.FC<NavigationButtonProps>} The `NavigationButton` component.
+ * @date Created on 25-01-2024
+ */
 export const NavigationButton: React.FC<NavigationButtonProps> = ({
 	onClick,
 }) => {
 	const imageRef = useRef<HTMLImageElement>(null);
 
-	const handleClick = () => {
-		gsap.to(imageRef.current, {
-			duration: 0.5,
-			rotation: 360,
-			onComplete: () => {
-				gsap.set(imageRef.current, { rotation: 0 });
-			},
-		});
-	};
-
 	return (
 		<Wrapper
 			onClick={(event) => {
 				onClick(event);
-				handleClick();
+				handleClick(imageRef);
 			}}>
 			<img
 				ref={imageRef}
