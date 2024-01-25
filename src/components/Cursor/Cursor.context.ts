@@ -7,7 +7,7 @@
  *
  * @file This file defines the cursor context for the application.
  * @author [Jose Toro]
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 
 import { createContext } from "react";
@@ -31,7 +31,7 @@ import { CursorContextType } from "./Cursor.types";
  * }
  *
  * @returns {Context} The cursor context
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 export const CursorContext = createContext<CursorContextType>(
 	{} as CursorContextType

@@ -26,10 +26,7 @@ import {
 } from "./Footer.styles";
 
 import BeatsbeLogo from "../../assets/beatsby-logo.png";
-import FacebookIcon from "../../assets/facebook-icon.svg";
-import TwitterIcon from "../../assets/twitter-icon.svg";
-import InstagramIcon from "../../assets/instagram-icon.svg";
-import LinkedinIcon from "../../assets/linkedin-icon.svg";
+import { productsLinks, supportsLinks, socials } from "./Footer.data";
 
 /**
  * Footer component of the application.
@@ -38,6 +35,8 @@ import LinkedinIcon from "../../assets/linkedin-icon.svg";
  * a subscription form, social media links, and copyright information.
  *
  * @returns {JSX.Element} The rendered Footer component.
+ *
+ * @date Created on 23-01-2024
  */
 export const Footer: React.FC = () => {
 	const { setHovered } = useContext(CursorContext);
@@ -58,66 +57,30 @@ export const Footer: React.FC = () => {
 				<Links>
 					<Products>
 						<h3>Products</h3>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Headphones
-						</a>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Earphones
-						</a>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Earbuds
-						</a>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Accessories
-						</a>
+						{productsLinks.map((product, index) => (
+							<a
+								key={index}
+								href="#"
+								onMouseEnter={() => setHovered(true)}
+								onMouseLeave={() => setHovered(false)}
+							>
+								{product}
+							</a>
+						))}
 					</Products>
 
 					<Support>
 						<h3>Supports</h3>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Product help
-						</a>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Register
-						</a>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Updates
-						</a>
-						<a
-							href="#"
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							Provides
-						</a>
+						{supportsLinks.map((support, index) => (
+							<a
+								key={index}
+								href="#"
+								onMouseEnter={() => setHovered(true)}
+								onMouseLeave={() => setHovered(false)}
+							>
+								{support}
+							</a>
+						))}
 					</Support>
 				</Links>
 
@@ -134,30 +97,15 @@ export const Footer: React.FC = () => {
 					</Subscribe>
 
 					<Socials>
-						<SocialButton
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							<img src={FacebookIcon} alt="Facebook logo" />
-						</SocialButton>
-						<SocialButton
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							<img src={TwitterIcon} alt="Twitter logo" />
-						</SocialButton>
-						<SocialButton
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							<img src={InstagramIcon} alt="Instagram logo" />
-						</SocialButton>
-						<SocialButton
-							onMouseEnter={() => setHovered(true)}
-							onMouseLeave={() => setHovered(false)}
-						>
-							<img src={LinkedinIcon} alt="Linkedin logo" />
-						</SocialButton>
+						{socials.map((media, index) => (
+							<SocialButton
+								key={index}
+								onMouseEnter={() => setHovered(true)}
+								onMouseLeave={() => setHovered(false)}
+							>
+								<img src={media.source} alt={media.alt} />
+							</SocialButton>
+						))}
 					</Socials>
 				</div>
 			</Grid>

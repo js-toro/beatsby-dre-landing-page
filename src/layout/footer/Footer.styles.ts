@@ -5,7 +5,7 @@
  *
  * @file This file contains the style definitions for the Footer component.
  * @author [Jose Toro]
- * @date Created on 24-01-2023
+ * @date Created on 24-01-2024
  */
 
 import styled from "styled-components";
@@ -16,10 +16,9 @@ import SendIcon from "../../assets/send-icon.svg";
 
 /**
  * Wrapper component for the footer.
- * 
+ *
  * This component styles the footer, including margins and font styles.
- * 
- * @component
+ *
  * @example
  * return (
  *   <Wrapper>
@@ -27,6 +26,8 @@ import SendIcon from "../../assets/send-icon.svg";
  *     <p>Some text</p>
  *   </Wrapper>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const Wrapper = styled.footer`
 	margin: 2.4rem auto;
@@ -50,11 +51,10 @@ export const Wrapper = styled.footer`
 
 /**
  * Grid component for the footer.
- * 
- * This component styles the grid layout of the footer. It uses CSS grid to 
+ *
+ * This component styles the grid layout of the footer. It uses CSS grid to
  * create a responsive layout that adjusts based on the screen size.
- * 
- * @component
+ *
  * @example
  * return (
  *   <Grid>
@@ -63,6 +63,8 @@ export const Wrapper = styled.footer`
  *     <div>Content 3</div>
  *   </Grid>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const Grid = styled.div`
 	display: grid;
@@ -75,17 +77,18 @@ export const Grid = styled.div`
 
 /**
  * HomeImage component for the footer.
- * 
- * This component styles the home image section of the footer. It uses CSS flexbox 
+ *
+ * This component styles the home image section of the footer. It uses CSS flexbox
  * to center the image within the div.
- * 
- * @component
+ *
  * @example
  * return (
  *   <HomeImage>
  *     <img src="image_url" alt="description" />
  *   </HomeImage>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const HomeImage = styled.div`
 	display: flex;
@@ -94,12 +97,11 @@ export const HomeImage = styled.div`
 
 /**
  * Links component for the footer.
- * 
- * This component styles the links section of the footer. It uses CSS flexbox 
- * to create a responsive layout that adjusts based on the screen size. On mobile, 
+ *
+ * This component styles the links section of the footer. It uses CSS flexbox
+ * to create a responsive layout that adjusts based on the screen size. On mobile,
  * the links are displayed in a column, and on larger screens, they are displayed in a row.
- * 
- * @component
+ *
  * @example
  * return (
  *   <Links>
@@ -108,6 +110,8 @@ export const HomeImage = styled.div`
  *     <a href="#">Link 3</a>
  *   </Links>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const Links = styled.div`
 	display: flex;
@@ -127,12 +131,11 @@ export const Links = styled.div`
 
 /**
  * Subscribe component for the footer.
- * 
- * This component styles the subscription form in the footer. It uses CSS flexbox 
- * to create a responsive layout that adjusts based on the screen size. On mobile, 
+ *
+ * This component styles the subscription form in the footer. It uses CSS flexbox
+ * to create a responsive layout that adjusts based on the screen size. On mobile,
  * the input and button are displayed in a column, and on larger screens, they are displayed in a row.
- * 
- * @component
+ *
  * @example
  * return (
  *   <Subscribe>
@@ -140,6 +143,8 @@ export const Links = styled.div`
  *     <button>Subscribe</button>
  *   </Subscribe>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const Subscribe = styled.div`
 	background-color: ${Colors.backgroundVariant};
@@ -170,12 +175,11 @@ export const Subscribe = styled.div`
 
 /**
  * LinksColumn component for the footer.
- * 
- * This component styles the column of links in the footer. It uses CSS flexbox 
- * to create a column layout. The gap between the links is set to 1rem. On larger screens, 
+ *
+ * This component styles the column of links in the footer. It uses CSS flexbox
+ * to create a column layout. The gap between the links is set to 1rem. On larger screens,
  * the column grows to take up more space. The text decoration for the links is removed.
- * 
- * @component
+ *
  * @example
  * return (
  *   <LinksColumn>
@@ -184,6 +188,8 @@ export const Subscribe = styled.div`
  *     <a href="#">Link 3</a>
  *   </LinksColumn>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const LinksColumn = styled.div`
 	display: flex;
@@ -201,11 +207,10 @@ export const LinksColumn = styled.div`
 
 /**
  * Products component for the footer.
- * 
- * This component styles the products links column in the footer. It extends the 
+ *
+ * This component styles the products links column in the footer. It extends the
  * LinksColumn component, so it inherits all of its styles.
- * 
- * @component
+ *
  * @example
  * return (
  *   <Products>
@@ -214,16 +219,17 @@ export const LinksColumn = styled.div`
  *     <a href="#">Product 3</a>
  *   </Products>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const Products = styled(LinksColumn)``;
 
 /**
  * Support component for the footer.
- * 
- * This component styles the support links column in the footer. It extends the 
+ *
+ * This component styles the support links column in the footer. It extends the
  * LinksColumn component, so it inherits all of its styles.
- * 
- * @component
+ *
  * @example
  * return (
  *   <Support>
@@ -232,24 +238,27 @@ export const Products = styled(LinksColumn)``;
  *     <a href="#">Support 3</a>
  *   </Support>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const Support = styled(LinksColumn)``;
 
 /**
  * SubscribeButton component for the footer.
- * 
- * This component styles the subscribe button in the footer. It extends the 
- * Button component, so it inherits all of its styles. The button contains an 
- * icon and text, which are centered using CSS flexbox. The icon is added using 
+ *
+ * This component styles the subscribe button in the footer. It extends the
+ * Button component, so it inherits all of its styles. The button contains an
+ * icon and text, which are centered using CSS flexbox. The icon is added using
  * the ::before pseudo-element.
- * 
- * @component
+ *
  * @example
  * return (
  *   <SubscribeButton>
  *     Subscribe
  *   </SubscribeButton>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const SubscribeButton = styled(Button)`
 	display: flex;
@@ -264,12 +273,11 @@ export const SubscribeButton = styled(Button)`
 
 /**
  * Socials component for the footer.
- * 
- * This component styles the social media links section in the footer. It uses CSS flexbox 
- * to create a responsive layout that adjusts based on the screen size. On mobile, 
+ *
+ * This component styles the social media links section in the footer. It uses CSS flexbox
+ * to create a responsive layout that adjusts based on the screen size. On mobile,
  * the links are centered, and on larger screens, they are aligned to the start.
- * 
- * @component
+ *
  * @example
  * return (
  *   <Socials>
@@ -278,6 +286,8 @@ export const SubscribeButton = styled(Button)`
  *     <a href="#"><img src="instagram_icon_url" alt="Instagram" /></a>
  *   </Socials>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const Socials = styled.div`
 	display: flex;
@@ -292,18 +302,19 @@ export const Socials = styled.div`
 
 /**
  * SocialButton component for the footer.
- * 
- * This component styles the social media buttons in the footer. It extends the 
- * Button component, so it inherits all of its styles. The button contains an 
+ *
+ * This component styles the social media buttons in the footer. It extends the
+ * Button component, so it inherits all of its styles. The button contains an
  * image, which is set to fill the entire button and maintain its aspect ratio.
- * 
- * @component
+ *
  * @example
  * return (
  *   <SocialButton>
  *     <img src="facebook_icon_url" alt="Facebook" />
  *   </SocialButton>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const SocialButton = styled(Button)`
 	width: 32px;
@@ -319,17 +330,18 @@ export const SocialButton = styled(Button)`
 
 /**
  * CopyRight component for the footer.
- * 
- * This component styles the copyright text in the footer. The text is centered 
+ *
+ * This component styles the copyright text in the footer. The text is centered
  * and has a margin of 3.2rem on all sides.
- * 
- * @component
+ *
  * @example
  * return (
  *   <CopyRight>
  *     © 2022 Company Name. All rights reserved.
  *   </CopyRight>
  * )
+ * @returns {JSX.Element} The layout component.
+ * @date Created on 24-01-2024
  */
 export const CopyRight = styled.p`
 	margin: 3.2rem;

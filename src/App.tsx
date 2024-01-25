@@ -5,7 +5,7 @@
  *
  * @file This file defines the main component of the application.
  * @author [Jose Toro]
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 
 import { GlobalStyle } from "./styles";
@@ -18,7 +18,7 @@ import { Layout } from "./layout";
  * It wraps the application with the global styles and the layout.
  *
  * @returns {JSX.Element} The App component with the global styles and the layout.
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 const App = () => {
 	return (

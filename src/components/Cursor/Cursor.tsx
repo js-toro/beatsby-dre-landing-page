@@ -6,7 +6,7 @@
  *
  * @file This file contains the Cursor component, which provides a custom cursor for the application.
  * @author [Jose Toro]
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 
 import React, { useEffect, useRef, useState } from "react";
@@ -24,8 +24,17 @@ import { animateCursor, animateCursorScale } from "./Cursor.animations";
  * @param {React.PropsWithChildren<CursorPropsTypes>} props - The props passed to the Cursor component.
  * @param {React.ReactNode} props.children - The child elements to be rendered within the Cursor component.
  *
+ * @example
+ * ```typescript
+ * return (
+ *		<Cursor>
+ *			// your children ...
+ *		</Cursor>
+ * )
+ * ```
+ *
  * @returns {React.ReactElement} Returns a CursorContext context provider that wraps the children and the custom cursor.
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 export const Cursor: React.FC<CursorPropsTypes> = ({ children }) => {
 	// State to know if the cursor is over an interactive element.

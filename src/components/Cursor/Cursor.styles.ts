@@ -5,7 +5,7 @@
  *
  * @file This file contains the style definitions for the Cursor component.
  * @author [Jose Toro]
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 
 import styled from "styled-components";
@@ -29,7 +29,7 @@ import styled from "styled-components";
  *
  * export default MyComponent;
  *
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 export const Wrapper = styled.div`
 	top: 0;
@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
  * This component is a div that is shaped like a circle
  * and is initially positioned off the screen (translate(-100px, -100px)).
  *
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  *
  * @example
  * ```typescript

@@ -6,7 +6,7 @@
  *
  * @file This file defines the entry point of the application.
  * @author [Jose Toro]
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 
 import React from "react";

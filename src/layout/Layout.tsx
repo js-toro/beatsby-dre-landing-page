@@ -6,7 +6,7 @@
  *
  * @file This file defines the Layout component.
  * @author [Jose Toro]
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 
 import React from "react";
@@ -20,7 +20,7 @@ import { Footer } from "./footer";
  * Layout Component
  *
  * This component returns a layout that includes the Cursor, Header, Home, and Footer.
- *
+ * 
  * @example
  *
  * ```typescript
@@ -30,7 +30,7 @@ import { Footer } from "./footer";
  * ```
  *
  * @returns {JSX.Element} The layout component.
- * @date Created on 23-01-2023
+ * @date Created on 23-01-2024
  */
 export const Layout: React.FC = () => {
 	return (
