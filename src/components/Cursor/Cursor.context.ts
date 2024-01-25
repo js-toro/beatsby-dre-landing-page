@@ -10,9 +10,9 @@
  * @date Created on 23-01-2024
  */
 
-import { createContext } from "react";
+import { createContext } from 'react';
 
-import { CursorContextType } from "./Cursor.types";
+import { CursorContextType } from './Cursor.types';
 
 /**
  * CursorContext is an instance of React Context with a defined type of CursorContextType.

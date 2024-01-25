@@ -1,16 +1,16 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect } from 'react';
 
-import { CursorContext } from "../../../../components/Cursor";
+import { CursorContext } from '../../../../components/Cursor';
 import {
 	DiscountButton,
 	DiscountImageContainer,
 	InfoContainer,
 	Wrapper,
-} from "./Discount.styles";
+} from './Discount.styles';
 
-import DiscountImage from "../../../../assets/discount-image.png";
-import ShoppingBag from "../../../../assets/shopping-bag-icon.svg";
-import { animateDiscount, animateDiscountWrapper } from "./Discount.animations";
+import DiscountImage from '../../../../assets/discount-image.png';
+import ShoppingBag from '../../../../assets/shopping-bag-icon.svg';
+import { animateDiscount, animateDiscountWrapper } from './Discount.animations';
 
 export const Discount = () => {
 	const { setHovered } = useContext(CursorContext);
@@ -28,9 +28,8 @@ export const Discount = () => {
 				<DiscountButton
 					onMouseEnter={() => setHovered(true)}
 					onMouseLeave={() => setHovered(false)}
-					$variant={true}
-				>
-					<img src={ShoppingBag} alt={"Shopping Bag Icon"} />
+					$variant={true}>
+					<img src={ShoppingBag} alt={'Shopping Bag Icon'} />
 					Buy now
 				</DiscountButton>
 			</InfoContainer>

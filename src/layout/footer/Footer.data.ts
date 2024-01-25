@@ -1,17 +1,17 @@
-import FacebookIcon from "../../assets/facebook-icon.svg";
-import TwitterIcon from "../../assets/twitter-icon.svg";
-import InstagramIcon from "../../assets/instagram-icon.svg";
-import LinkedinIcon from "../../assets/linkedin-icon.svg";
+import FacebookIcon from '../../assets/facebook-icon.svg';
+import TwitterIcon from '../../assets/twitter-icon.svg';
+import InstagramIcon from '../../assets/instagram-icon.svg';
+import LinkedinIcon from '../../assets/linkedin-icon.svg';
 
 /**
  * Array of strings representing the product links.
  * @type {string[]}
  */
 export const productsLinks: string[] = [
-  "Headphones",
-  "Earphones",
-  "Earbuds",
-  "Accessories",
+	'Headphones',
+	'Earphones',
+	'Earbuds',
+	'Accessories',
 ];
 
 /**
@@ -19,10 +19,10 @@ export const productsLinks: string[] = [
  * @type {string[]}
  */
 export const supportsLinks: string[] = [
-  "Product help",
-  "Register",
-  "Updates",
-  "Providers",
+	'Product help',
+	'Register',
+	'Updates',
+	'Providers',
 ];
 
 /**
@@ -32,11 +32,11 @@ export const supportsLinks: string[] = [
  * @type {{source: string, alt: string}[]}
  */
 export const socials: {
-  source: string;
-  alt: string;
+	source: string;
+	alt: string;
 }[] = [
-  { source: FacebookIcon, alt: "Facebook Icon" },
-  { source: TwitterIcon, alt: "Twitter Icon" },
-  { source: InstagramIcon, alt: "Instagram Icon" },
-  { source: LinkedinIcon, alt: "Linkedin Icon" },
+	{ source: FacebookIcon, alt: 'Facebook Icon' },
+	{ source: TwitterIcon, alt: 'Twitter Icon' },
+	{ source: InstagramIcon, alt: 'Instagram Icon' },
+	{ source: LinkedinIcon, alt: 'Linkedin Icon' },
 ];

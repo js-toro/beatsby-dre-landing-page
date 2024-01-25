@@ -1,7 +1,7 @@
-import gsap from "gsap";
-import { useContext, useEffect } from "react";
+import gsap from 'gsap';
+import { useContext, useEffect } from 'react';
 
-import { CursorContext } from "../../../../components/Cursor";
+import { CursorContext } from '../../../../components/Cursor';
 import {
 	Grid,
 	Product,
@@ -11,19 +11,19 @@ import {
 	ProductTitle,
 	Title,
 	Wrapper,
-} from "./Products.styles";
+} from './Products.styles';
 
-import ShoppingBagIcon from "../../../../assets/shopping-bag-icon.svg";
-import Product1 from "../../../../assets/product-1.png";
-import Product2 from "../../../../assets/product-2.png";
-import Product3 from "../../../../assets/product-3.png";
-import Product4 from "../../../../assets/product-4.png";
-import Product5 from "../../../../assets/product-5.png";
+import ShoppingBagIcon from '../../../../assets/shopping-bag-icon.svg';
+import Product1 from '../../../../assets/product-1.png';
+import Product2 from '../../../../assets/product-2.png';
+import Product3 from '../../../../assets/product-3.png';
+import Product4 from '../../../../assets/product-4.png';
+import Product5 from '../../../../assets/product-5.png';
 import {
 	animateProduct,
 	animateProductImage,
 	animateProductsTitle,
-} from "./Products.animations";
+} from './Products.animations';
 
 export const Products = () => {
 	const { setHovered } = useContext(CursorContext);
@@ -33,7 +33,7 @@ export const Products = () => {
 		animateProduct();
 
 		const imageElements =
-			gsap.utils.toArray<HTMLImageElement>(".product-image");
+			gsap.utils.toArray<HTMLImageElement>('.product-image');
 		animateProductImage(imageElements);
 	}, []);
 
@@ -60,8 +60,7 @@ export const Products = () => {
 						<ProductButton
 							onMouseEnter={() => setHovered(true)}
 							onMouseLeave={() => setHovered(false)}
-							$variant={true}
-						>
+							$variant={true}>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -86,8 +85,7 @@ export const Products = () => {
 						<ProductButton
 							onMouseEnter={() => setHovered(true)}
 							onMouseLeave={() => setHovered(false)}
-							$variant={true}
-						>
+							$variant={true}>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -112,8 +110,7 @@ export const Products = () => {
 						<ProductButton
 							onMouseEnter={() => setHovered(true)}
 							onMouseLeave={() => setHovered(false)}
-							$variant={true}
-						>
+							$variant={true}>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -138,8 +135,7 @@ export const Products = () => {
 						<ProductButton
 							onMouseEnter={() => setHovered(true)}
 							onMouseLeave={() => setHovered(false)}
-							$variant={true}
-						>
+							$variant={true}>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}
@@ -164,8 +160,7 @@ export const Products = () => {
 						<ProductButton
 							onMouseEnter={() => setHovered(true)}
 							onMouseLeave={() => setHovered(false)}
-							$variant={true}
-						>
+							$variant={true}>
 							<img
 								draggable="false"
 								src={ShoppingBagIcon}

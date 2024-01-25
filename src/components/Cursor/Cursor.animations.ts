@@ -8,8 +8,8 @@
  * @date Created on 23-01-2024
  */
 
-import { RefObject } from "react";
-import gsap from "gsap";
+import { RefObject } from 'react';
+import gsap from 'gsap';
 
 /**
  * This function animates the cursor to follow the mouse movement.
@@ -21,14 +21,14 @@ export const animateCursor = (cursor: RefObject<HTMLDivElement>): void => {
 	gsap.set(cursor.current, { xPercent: -50, yPercent: -50 });
 	const targets = gsap.utils.toArray(cursor.current);
 	// We add a listening event for mouse movement
-	window.addEventListener("mousemove", (e) => {
+	window.addEventListener('mousemove', (e) => {
 		// We animate the cursor to follow the mouse
 		gsap.to(targets, {
 			duration: 0.33,
 			x: e.clientX,
 			y: e.clientY,
-			ease: "power1.out",
-			overwrite: "auto",
+			ease: 'power1.out',
+			overwrite: 'auto',
 			stagger: 0.02,
 		});
 	});
@@ -49,14 +49,14 @@ export const animateCursorScale = (
 		gsap.to(cursor.current, {
 			duration: 0.3,
 			scale: 10,
-			ease: "power1.out",
+			ease: 'power1.out',
 		});
 	} else {
 		// If the cursor is not hovering over an element, we return to its original size
 		gsap.to(cursor.current, {
 			duration: 0.3,
 			scale: 1,
-			ease: "power1.out",
+			ease: 'power1.out',
 		});
 	}
 };

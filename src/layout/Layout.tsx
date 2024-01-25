@@ -9,18 +9,18 @@
  * @date Created on 23-01-2024
  */
 
-import React from "react";
+import React from 'react';
 
-import { Cursor } from "../components/Cursor";
-import { Header } from "./header";
-import { Home } from "./pages/Home";
-import { Footer } from "./footer";
+import { Cursor } from '../components/Cursor';
+import { Header } from './header';
+import { Home } from './pages/Home';
+import { Footer } from './footer';
 
 /**
  * Layout Component
  *
  * This component returns a layout that includes the Cursor, Header, Home, and Footer.
- * 
+ *
  * @example
  *
  * ```typescript

@@ -1,7 +1,7 @@
-import gsap from "gsap";
-import { useContext, useEffect } from "react";
+import gsap from 'gsap';
+import { useContext, useEffect } from 'react';
 
-import { CursorContext } from "../../../../components/Cursor";
+import { CursorContext } from '../../../../components/Cursor';
 import {
 	Wrapper,
 	HeroImage,
@@ -10,24 +10,24 @@ import {
 	HeroSubtitle,
 	CTA,
 	Stores,
-} from "./Hero.styles";
+} from './Hero.styles';
 
-import HeroPng from "../../../../assets/hero.png";
-import AmazonLogo from "../../../../assets/amazon-logo.png";
-import AppleLogo from "../../../../assets/apple-logo.png";
-import Spotify from "../../../../assets/spotify-logo.png";
-import Youtube from "../../../../assets/youtube-logo.png";
-import bag from "../../../../assets/shopping-bag-icon.svg";
+import HeroPng from '../../../../assets/hero.png';
+import AmazonLogo from '../../../../assets/amazon-logo.png';
+import AppleLogo from '../../../../assets/apple-logo.png';
+import Spotify from '../../../../assets/spotify-logo.png';
+import Youtube from '../../../../assets/youtube-logo.png';
+import bag from '../../../../assets/shopping-bag-icon.svg';
 
-import { animateImage, animateHeadingTextOut } from "./Hero.animations";
+import { animateImage, animateHeadingTextOut } from './Hero.animations';
 
 export const Hero = () => {
 	const { setHovered } = useContext(CursorContext);
 
 	useEffect(() => {
-		animateHeadingTextOut(".heading-text");
+		animateHeadingTextOut('.heading-text');
 
-		const imageElements = gsap.utils.toArray<HTMLImageElement>(".stores-image");
+		const imageElements = gsap.utils.toArray<HTMLImageElement>('.stores-image');
 		animateImage(imageElements);
 	}, []);
 
@@ -54,8 +54,7 @@ export const Hero = () => {
 				</HeroDescription>
 				<CTA
 					onMouseEnter={() => setHovered(true)}
-					onMouseLeave={() => setHovered(false)}
-				>
+					onMouseLeave={() => setHovered(false)}>
 					<img src={bag} alt="Bag icon" />
 					Add to Bag <span>N399K</span>
 				</CTA>
@@ -65,8 +64,7 @@ export const Hero = () => {
 				<a
 					href="#"
 					onMouseEnter={() => setHovered(true)}
-					onMouseLeave={() => setHovered(false)}
-				>
+					onMouseLeave={() => setHovered(false)}>
 					<img
 						className="stores-image"
 						draggable="false"
@@ -77,8 +75,7 @@ export const Hero = () => {
 				<a
 					href="#"
 					onMouseEnter={() => setHovered(true)}
-					onMouseLeave={() => setHovered(false)}
-				>
+					onMouseLeave={() => setHovered(false)}>
 					<img
 						className="stores-image"
 						draggable="false"
@@ -89,8 +86,7 @@ export const Hero = () => {
 				<a
 					href="#"
 					onMouseEnter={() => setHovered(true)}
-					onMouseLeave={() => setHovered(false)}
-				>
+					onMouseLeave={() => setHovered(false)}>
 					<img
 						className="stores-image"
 						draggable="false"
@@ -101,8 +97,7 @@ export const Hero = () => {
 				<a
 					href="#"
 					onMouseEnter={() => setHovered(true)}
-					onMouseLeave={() => setHovered(false)}
-				>
+					onMouseLeave={() => setHovered(false)}>
 					<img
 						className="stores-image"
 						draggable="false"

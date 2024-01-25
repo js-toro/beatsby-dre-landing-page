@@ -1,6 +1,6 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect } from 'react';
 
-import { CursorContext } from "../../../../components/Cursor";
+import { CursorContext } from '../../../../components/Cursor';
 import {
 	CaseButton,
 	CaseContainer,
@@ -8,7 +8,7 @@ import {
 	CaseInfoContainer,
 	Title,
 	Wrapper,
-} from "./Case.styles";
+} from './Case.styles';
 
 import {
 	animateTitle,
@@ -16,10 +16,10 @@ import {
 	animateOnButtonEnter,
 	animateOnButtonExit,
 	animateCaseImage,
-} from "./Case.animations";
+} from './Case.animations';
 
-import CaseImage from "../../../../assets/case-image.png";
-import AlertIcon from "../../../../assets/alert-icon.svg";
+import CaseImage from '../../../../assets/case-image.png';
+import AlertIcon from '../../../../assets/alert-icon.svg';
 
 export const Case = () => {
 	const { setHovered } = useContext(CursorContext);
@@ -58,9 +58,8 @@ export const Case = () => {
 						onMouseLeave={() => {
 							setHovered(false);
 							animateOnButtonExit();
-						}}
-					>
-						<img src={AlertIcon} alt="Alert icon" />{" "}
+						}}>
+						<img src={AlertIcon} alt="Alert icon" />{' '}
 						<span className="more-info-text">More info</span>
 					</CaseButton>
 				</CaseInfoContainer>

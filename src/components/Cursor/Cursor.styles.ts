@@ -8,7 +8,7 @@
  * @date Created on 23-01-2024
  */
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 /**
  * This component is a div that is positioned fixed on the screen,

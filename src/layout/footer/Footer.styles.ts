@@ -8,11 +8,11 @@
  * @date Created on 24-01-2024
  */
 
-import styled from "styled-components";
-import { Colors, Button } from "../../styles";
-import { Breakpoints } from "../../styles";
+import styled from 'styled-components';
+import { Colors, Button } from '../../styles';
+import { Breakpoints } from '../../styles';
 
-import SendIcon from "../../assets/send-icon.svg";
+import SendIcon from '../../assets/send-icon.svg';
 
 /**
  * Wrapper component for the footer.
@@ -166,7 +166,7 @@ export const Subscribe = styled.div`
 		border: none;
 		padding: 1rem;
 		color: ${Colors.light};
-		font-family: "Poppins", sans-serif;
+		font-family: 'Poppins', sans-serif;
 		font-weight: 400;
 		font-size: 1.5rem;
 		line-height: 2.2rem;

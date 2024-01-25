@@ -8,7 +8,7 @@
  * @date Created on 24-01-2024
  */
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 /**
  * `Wrapper` is a styled component that defines a container with a grid structure.

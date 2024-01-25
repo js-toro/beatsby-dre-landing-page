@@ -8,9 +8,9 @@
  * @date Created on 24-01-2024
  */
 
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import { CursorContext } from "../../components/Cursor";
+import { CursorContext } from '../../components/Cursor';
 import {
 	CopyRight,
 	Grid,
@@ -23,10 +23,10 @@ import {
 	SocialButton,
 	Products,
 	Support,
-} from "./Footer.styles";
+} from './Footer.styles';
 
-import BeatsbeLogo from "../../assets/beatsby-logo.png";
-import { productsLinks, supportsLinks, socials } from "./Footer.data";
+import BeatsbeLogo from '../../assets/beatsby-logo.png';
+import { productsLinks, supportsLinks, socials } from './Footer.data';
 
 /**
  * Footer component of the application.
@@ -48,8 +48,7 @@ export const Footer: React.FC = () => {
 					<a
 						href="#"
 						onMouseEnter={() => setHovered(true)}
-						onMouseLeave={() => setHovered(false)}
-					>
+						onMouseLeave={() => setHovered(false)}>
 						<img draggable="false" src={BeatsbeLogo} alt="Beatsby Logo" />
 					</a>
 				</HomeImage>
@@ -62,8 +61,7 @@ export const Footer: React.FC = () => {
 								key={index}
 								href="#"
 								onMouseEnter={() => setHovered(true)}
-								onMouseLeave={() => setHovered(false)}
-							>
+								onMouseLeave={() => setHovered(false)}>
 								{product}
 							</a>
 						))}
@@ -76,8 +74,7 @@ export const Footer: React.FC = () => {
 								key={index}
 								href="#"
 								onMouseEnter={() => setHovered(true)}
-								onMouseLeave={() => setHovered(false)}
-							>
+								onMouseLeave={() => setHovered(false)}>
 								{support}
 							</a>
 						))}
@@ -90,8 +87,7 @@ export const Footer: React.FC = () => {
 						<SubscribeButton
 							onMouseEnter={() => setHovered(true)}
 							onMouseLeave={() => setHovered(false)}
-							$variant={true}
-						>
+							$variant={true}>
 							Subscribe
 						</SubscribeButton>
 					</Subscribe>
@@ -101,8 +97,7 @@ export const Footer: React.FC = () => {
 							<SocialButton
 								key={index}
 								onMouseEnter={() => setHovered(true)}
-								onMouseLeave={() => setHovered(false)}
-							>
+								onMouseLeave={() => setHovered(false)}>
 								<img src={media.source} alt={media.alt} />
 							</SocialButton>
 						))}

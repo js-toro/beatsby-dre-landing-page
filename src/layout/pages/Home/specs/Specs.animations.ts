@@ -1,14 +1,14 @@
-import gsap from "gsap";
+import gsap from 'gsap';
 
 export const animateTitle = () => {
-	gsap.to(".title", {
+	gsap.to('.title', {
 		opacity: 1,
 		y: 0,
-		ease: "none",
+		ease: 'none',
 		scrollTrigger: {
-			trigger: ".title",
-			start: "center 100%",
-			end: "center 50%",
+			trigger: '.title',
+			start: 'center 100%',
+			end: 'center 50%',
 			scrub: true,
 		},
 	});
@@ -19,11 +19,11 @@ export const animateSpecs = (specElements: HTMLDivElement[]) => {
 		gsap.to(text, {
 			opacity: 1,
 			x: 0,
-			ease: "none",
+			ease: 'none',
 			scrollTrigger: {
 				trigger: text,
-				start: "center 100%",
-				end: "center 80%",
+				start: 'center 100%',
+				end: 'center 80%',
 				scrub: true,
 			},
 		});
@@ -31,21 +31,21 @@ export const animateSpecs = (specElements: HTMLDivElement[]) => {
 };
 
 export const animateImage = () => {
-	gsap.to(".image", {
+	gsap.to('.image', {
 		y: -25,
 		duration: 7,
 		repeat: -1,
 		yoyo: true,
-		ease: "none",
+		ease: 'none',
 	});
 
-	gsap.to(".image img", {
+	gsap.to('.image img', {
 		opacity: 1,
-		ease: "none",
+		ease: 'none',
 		scrollTrigger: {
-			trigger: ".image",
-			start: "center 100%",
-			end: "center 70%",
+			trigger: '.image',
+			start: 'center 100%',
+			end: 'center 70%',
 			scrub: true,
 		},
 	});

@@ -9,9 +9,9 @@
  * @date Created on 24-01-2023
  */
 
-import styled, { createGlobalStyle } from "styled-components";
-import { Colors } from "./Colors";
-import { Breakpoints } from "./Breakpoints";
+import styled, { createGlobalStyle } from 'styled-components';
+import { Colors } from './Colors';
+import { Breakpoints } from './Breakpoints';
 
 /**
  * Define los estilos globales para la aplicación.
@@ -148,7 +148,7 @@ export const Button = styled.button<{ $variant?: boolean }>`
 	padding: 2rem;
 	border-radius: 8px;
 	border: 2px solid transparent;
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 3rem;

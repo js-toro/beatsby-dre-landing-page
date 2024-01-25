@@ -1,10 +1,10 @@
-import gsap from "gsap";
-import { MouseEvent, useRef } from "react";
+import gsap from 'gsap';
+import { MouseEvent, useRef } from 'react';
 
-import styled from "styled-components";
-import { Breakpoints } from "../../../styles";
+import styled from 'styled-components';
+import { Breakpoints } from '../../../styles';
 
-import HamburguerIcon from "../../../assets/hamburger-icon.svg";
+import HamburguerIcon from '../../../assets/hamburger-icon.svg';
 
 const Wrapper = styled.button`
 	justify-self: end;
@@ -53,8 +53,7 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
 			onClick={(event) => {
 				onClick(event);
 				handleClick();
-			}}
-		>
+			}}>
 			<img
 				ref={imageRef}
 				draggable="false"

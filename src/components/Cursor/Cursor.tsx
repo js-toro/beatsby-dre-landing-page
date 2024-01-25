@@ -9,13 +9,13 @@
  * @date Created on 23-01-2024
  */
 
-import React, { useEffect, useRef, useState } from "react";
-import { isMobile } from "react-device-detect";
+import React, { useEffect, useRef, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
-import { CursorPropsTypes } from "./Cursor.types";
-import { CursorContext } from "./Cursor.context";
-import { Ball, Wrapper } from "./Cursor.styles";
-import { animateCursor, animateCursorScale } from "./Cursor.animations";
+import { CursorPropsTypes } from './Cursor.types';
+import { CursorContext } from './Cursor.context';
+import { Ball, Wrapper } from './Cursor.styles';
+import { animateCursor, animateCursorScale } from './Cursor.animations';
 
 /**
  * Cursor is a React component that provides a custom cursor for the application.

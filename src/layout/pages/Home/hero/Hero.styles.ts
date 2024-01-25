@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Breakpoints, Button } from "../../../../styles";
+import styled from 'styled-components';
+import { Breakpoints, Button } from '../../../../styles';
 
 export const Wrapper = styled.section`
 	display: grid;
@@ -62,7 +62,7 @@ export const HeroTitle = styled.h1`
 	}
 
 	span:last-child {
-		content: "On ear";
+		content: 'On ear';
 		position: absolute;
 		top: -6rem;
 		left: 1.5rem;

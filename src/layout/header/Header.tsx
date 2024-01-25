@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useState } from 'react';
 
-import { CursorContext } from "../../components/Cursor";
-import { Wrapper, NavigationMenu, Link } from "./Header.styles";
-import { scrollToSection } from "./Header.animations";
+import { CursorContext } from '../../components/Cursor';
+import { Wrapper, NavigationMenu, Link } from './Header.styles';
+import { scrollToSection } from './Header.animations';
 
-import { HomeLink } from "./HomeLink";
-import { NavigationButton } from "./NavigationButton";
+import { HomeLink } from './HomeLink';
+import { NavigationButton } from './NavigationButton';
 
 export const Header = () => {
 	const { setHovered } = useContext(CursorContext);
@@ -29,9 +29,8 @@ export const Header = () => {
 					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
-						scrollToSection("#home-section");
-					}}
-				>
+						scrollToSection('#home-section');
+					}}>
 					Home
 				</Link>
 				<Link
@@ -39,9 +38,8 @@ export const Header = () => {
 					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
-						scrollToSection("#specs-section");
-					}}
-				>
+						scrollToSection('#specs-section');
+					}}>
 					Specs
 				</Link>
 				<Link
@@ -49,9 +47,8 @@ export const Header = () => {
 					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
-						scrollToSection("#case-section");
-					}}
-				>
+						scrollToSection('#case-section');
+					}}>
 					Case
 				</Link>
 				<Link
@@ -59,9 +56,8 @@ export const Header = () => {
 					onMouseLeave={() => setHovered(false)}
 					onClick={() => {
 						closeNavigationMenu();
-						scrollToSection("#products-section");
-					}}
-				>
+						scrollToSection('#products-section');
+					}}>
 					Products
 				</Link>
 			</NavigationMenu>

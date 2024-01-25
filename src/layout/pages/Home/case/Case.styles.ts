@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Breakpoints, Button } from "../../../../styles";
+import styled from 'styled-components';
+import { Breakpoints, Button } from '../../../../styles';
 
 export const Wrapper = styled.section`
 	margin: 0 auto;

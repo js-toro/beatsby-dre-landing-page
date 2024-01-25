@@ -8,13 +8,13 @@
  * @date Created on 24-01-2024
  */
 
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import { CursorContext } from "../../../components/Cursor";
-import { HomeLinkProps } from "./HomeLink.types";
-import { Wrapper } from "./HomeLink.styles";
+import { CursorContext } from '../../../components/Cursor';
+import { HomeLinkProps } from './HomeLink.types';
+import { Wrapper } from './HomeLink.styles';
 
-import BeatsbyDreLogo from "../../../assets/beatsby-logo.png";
+import BeatsbyDreLogo from '../../../assets/beatsby-logo.png';
 
 /**
  * `HomeLink` is a component that displays a link to the home section of the page.
@@ -40,8 +40,7 @@ export const HomeLink: React.FC<HomeLinkProps> = ({ scrollToSection }) => {
 			<a
 				onMouseEnter={() => setHovered(true)}
 				onMouseLeave={() => setHovered(false)}
-				onClick={() => scrollToSection("#home-section")}
-			>
+				onClick={() => scrollToSection('#home-section')}>
 				<img src={BeatsbyDreLogo} draggable="false" alt="Beatsby Logo" />
 			</a>
 		</Wrapper>

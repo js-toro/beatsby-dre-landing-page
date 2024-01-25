@@ -1,4 +1,4 @@
-import { Hero, Specs, Case, Discount, Products } from ".";
+import { Hero, Specs, Case, Discount, Products } from '.';
 
 export const Home = () => {
 	return (

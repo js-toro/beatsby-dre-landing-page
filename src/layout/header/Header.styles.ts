@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Breakpoints, Colors } from "../../styles";
+import styled from 'styled-components';
+import { Breakpoints, Colors } from '../../styles';
 
 export const Wrapper = styled.header`
 	position: fixed;

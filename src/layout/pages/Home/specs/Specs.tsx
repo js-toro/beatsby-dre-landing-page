@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import gsap from "gsap";
+import { useEffect } from 'react';
+import gsap from 'gsap';
 
 import {
 	Grid,
@@ -9,22 +9,22 @@ import {
 	SpecTitle,
 	Title,
 	Wrapper,
-} from "./Specs.styles";
+} from './Specs.styles';
 
-import { animateImage, animateSpecs, animateTitle } from "./Specs.animations";
+import { animateImage, animateSpecs, animateTitle } from './Specs.animations';
 
 // import all images
-import BluetoothIcon from "../../../../assets/bluetooth-icon.svg";
-import BatteryIcon from "../../../../assets/battery-charging-icon.svg";
-import PlugIcon from "../../../../assets/plug-icon.svg";
-import MicIcon from "../../../../assets/mic-icon.svg";
-import SpecsImage from "../../../../assets/specs-image.png";
+import BluetoothIcon from '../../../../assets/bluetooth-icon.svg';
+import BatteryIcon from '../../../../assets/battery-charging-icon.svg';
+import PlugIcon from '../../../../assets/plug-icon.svg';
+import MicIcon from '../../../../assets/mic-icon.svg';
+import SpecsImage from '../../../../assets/specs-image.png';
 
 export const Specs = () => {
 	useEffect(() => {
 		animateTitle();
 
-		const specElements = gsap.utils.toArray<HTMLDivElement>(".spec");
+		const specElements = gsap.utils.toArray<HTMLDivElement>('.spec');
 		animateSpecs(specElements);
 
 		animateImage();
